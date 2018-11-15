@@ -14,7 +14,7 @@ export default new Router({
     },
 
     {
-      path: '/components/ActiveTrips',
+      path: '/trips',
       name: 'ActiveTrips',
       component: ActiveTrips
     }

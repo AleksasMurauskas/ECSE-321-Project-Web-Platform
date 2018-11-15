@@ -3,7 +3,6 @@
     <h2> Trip Info </h2>
     <table>
         <tr>
-          <th>Trip ID</th>
           <th>Trip Times</th>
           <th>Trip Locations</th>
           <th>Routes</th>
@@ -40,8 +39,7 @@
   </div>
 </template>
 
-<script src="./router/index.js">
-
+<script>
 </script>
 
 <style>
