@@ -1,18 +1,18 @@
 <template>
-    <div class="item">{{index + 1}} {{ text }}</div>
+    <div class="i">{{index + 1}} {{ text }}</div>
 </template>
 
 <script>
     export default {
         props: {
             index: Number,
-            text: "temp"
+            text: String
         }
     }
 </script>
 
 <style>
-    .item {
+    .i {
         height: 50px;
         line-height: 50px;
         padding-left: 20px;

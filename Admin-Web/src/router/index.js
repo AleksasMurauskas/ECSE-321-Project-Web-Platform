@@ -12,10 +12,10 @@ export default new Router({
       name: 'Hello',
       component: Hello
     },
-     {
-    path: '/Ranking',
-    name: 'Ranking',
-    component: Ranking 
+    {
+      path: '/Ranking',
+      name: 'Ranking',
+      component: Ranking
     }
   ]
 })
