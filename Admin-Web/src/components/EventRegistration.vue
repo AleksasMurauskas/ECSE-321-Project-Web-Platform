@@ -13,13 +13,13 @@
       	</td>
   	  </tr>
 
-      <tr>
-    <td>
-        <input type="text" v-model="newParticipant" placeholder="Participant Name">
-    </td>
-    <td>
-        <button @click="createParticipant(newParticipant)">Create Participant</button>
-    </td>
+    	<tr>
+    	<td>
+        	<input type="text" v-model="newParticipant" placeholder="Participant Name">
+    	</td>
+    	<td>
+        	<button @click="createParticipant(newParticipant)">Create Participant</button>
+    	</td>
   </tr>
     </table>
     <p>
