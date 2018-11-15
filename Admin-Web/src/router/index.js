@@ -19,11 +19,11 @@ export default new Router({
       name: 'ActiveTrips',
       component: ActiveTrips
 
-    }
+    },
      {
     path: '/Ranking',
     name: 'Ranking',
-    component: Ranking 
+    component: Ranking
     }
   ]
 })
