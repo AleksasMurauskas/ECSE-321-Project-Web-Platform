@@ -1,7 +1,7 @@
 <template>
   <div id="Ranking">
     <h2>Rankings</h2>
-    <table style="align:center">
+    <table>
       <thead>
           <th>Top Performing Drivers</th>
           <th>Most Loyal Customers</th>
@@ -48,17 +48,31 @@
 <script>
   import Item from './item.vue'
   import VirtualList from 'vue-virtual-scroll-list'
+  import User from './model/User'
+
+
+
+  const getList = () => {
+    var user1 = new User(0, 'John')
+    return new [user1.toString]
+  }
 
   export default {
-    name: 'test',
+    name: 'Ranking',
     components: { Item, VirtualList },
     data () {
       return {
         startIndex: 0,
-        items: new Array(100000)
+        items: getList()
       }
+    },
+    methods: {
+
     }
   }
+
+
+
 </script>
 
 
@@ -70,7 +84,12 @@
     background: #f2ece8;
   }
 
+  table {
+    align:"center";
+    margin: auto;
+  }
+
   th, td{
-    padding: 30px;
+    padding: 50px;
   }
 </style>
