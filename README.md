@@ -99,3 +99,11 @@ October 31st: Original Sprint 2 end date, Code jam to build base UI
 November 1st: Code jam day, Edited model and backend, Finalized UI, built UI interactions with buttons fields, and Recycle views. Tested code with Android emulator, Enabled Fronted to communicate with backend, Search trips algorithm created.  
 
 Novemebr 2nd: Sprint Due date extended Final prepartations created. 
+
+## Sprint 3 Admin Web Platform
+
+November 12th- First Group  Meeting, broke the 2 major pages into two groups, Set deadline to create baseline html code that is fully runnable by thursday the 15th, Drew Mockups of UI Layout. 
+
+November 15th- Second Group Meeting 
+
+
