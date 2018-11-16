@@ -39,8 +39,43 @@
   </div>
 </template>
 
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+
+$(function () {
+    $("#filter").click(function () {
+        try {
+            destinations = $("#inputFilter").endpoint();
+            if (destinations != "") {
+                destinationsArray = destinations.split(",");
+                $("#my-table tr:gt(0)").hide();
+                $.each(destinationsArray, function (i, v) {
+                    $("#my-table tr").filter(function(){
+                        //do your filtering, this is an example
+                        //and use contains
+                        return this.dataset.id.contains(v);
+                    }).show();
+                })
+            } else {
+                $("#my-table tr").show();
+            }
+        }
+        catch (error) {
+            try {
+                $body.removeClass("loading");
+            }
+            catch (error) {
+            }
+            alert(error);
+        }
+    });
+});
+
+$("#my-table tr[trip-destinations~=" + v + "]").show();
+
 </script>
+
+<input id='inputFilter'>
+<button id='filter'>filter</button>
 
 <style>
 
