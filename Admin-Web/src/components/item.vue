@@ -1,12 +1,11 @@
 <template>
-    <div class="i">{{index + 1}} {{ text }}</div>
+    <div class="i">#{{index}} {{text}}</div>
 </template>
 
 <script>
     export default {
         props: {
-            index: Number,
-            text: String
+            index: Number
         }
     }
 </script>
