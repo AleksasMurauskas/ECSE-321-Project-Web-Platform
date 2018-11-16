@@ -9,19 +9,17 @@
       </thead>
       <tbody>
         <td>
-          <VirtualList :size="50" :remain="6" :bench="44" class="list" :start="startIndex">
-            <Item v-for="(udf, index) of items" :index="index" :key="index"></Item>
-          </VirtualList>
+          <RecycleScroller class="scroller" :items="items" :item-height="30">
+            <div slot-scope="{ item }" class="user">
+              {{ item.company }}
+            </div>
+          </RecycleScroller>
         </td>
         <td>
-          <VirtualList :size="50" :remain="6" :bench="44" class="list" :start="startIndex">
-            <Item v-for="(udf, index) of items" :index="index" :key="index"></Item>
-          </VirtualList>
+
         </td>
         <td>
-          <VirtualList :size="50" :remain="6" :bench="44" class="list" :start="startIndex">
-            <Item v-for="(udf, index) of items" :index="index" :key="index"></Item>
-          </VirtualList>
+
         </td>
       </tbody>
     </table>
@@ -46,33 +44,20 @@
 </template>
 
 <script>
-  import Item from './item.vue'
-  import VirtualList from 'vue-virtual-scroll-list'
-  import User from './model/User'
+  import items from "./temp_data/ranking_fake_data.json";
 
-
-
-  const getList = () => {
-    var user1 = new User(0, 'John')
-    return new [user1.toString]
-  }
 
   export default {
-    name: 'Ranking',
-    components: { Item, VirtualList },
-    data () {
+    data(){
       return {
-        startIndex: 0,
-        items: getList()
+        items
       }
     },
-    methods: {
 
+    props: {
+      list: Array
     }
-  }
-
-
-
+  };
 </script>
 
 
@@ -91,5 +76,15 @@
 
   th, td{
     padding: 50px;
+  }
+  .scroller {
+    height: 300px;
+    overflow-y: auto;
+  }
+  .user {
+    height: 32px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
   }
 </style>
