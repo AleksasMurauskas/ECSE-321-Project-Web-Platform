@@ -58,7 +58,7 @@ export default {
       //this.p.push(p)
       // Reset the name field for new participants
       //this.newParticipant = ''
-      this.sELECTEDTRIP = trip
+      this.selectedTrip = trip
     }
   }
 
