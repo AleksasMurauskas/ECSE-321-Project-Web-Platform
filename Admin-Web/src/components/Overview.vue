@@ -1,7 +1,15 @@
 <template>
-  <div id="eventregistration">
+  <div id="overview">
     <h2>OverView</h2>
     <table>
+    <tr>
+    <td>
+        <input type="text" v-model="search" placeholder="*">
+    </td>
+    <td>
+        <button @click="search(search)">Search</button>
+    </td>
+</tr>
       <tr v-for="trip in trips" >
       	<td>{{ trip.iD }}</td>
         <td>{{ trip.startPoint }}</td>
@@ -15,14 +23,7 @@
 
   	  </tr>
 
-    	<tr>
-    	<td>
-        	<input type="text" v-model="newParticipant" placeholder="Participant Name">
-    	</td>
-    	<td>
-        	<button @click="createParticipant(newParticipant)">Create Participant</button>
-    	</td>
-  </tr>
+
     </table>
 
 
@@ -48,19 +49,19 @@
         </tr>
       <tbody>
         <tr>
-            <td>{{ sELECTEDTRIP.iD  }}</td>
-            <td>{{ sELECTEDTRIP.driver  }}</td>
-            <td> {{ sELECTEDTRIP.startTime  }}  </td>
-            <td>  {{ sELECTEDTRIP.endTime  }} </td>
-            <td> {{ sELECTEDTRIP.startPoint  }} </td>
-            <td> {{ sELECTEDTRIP.endPoint  }} </td>
-            <td> <tr v-for="tripnode in sELECTEDTRIP.tripNodes ">
+            <td>{{ selectedTrip.iD  }}</td>
+            <td>{{ selectedTrip.driver  }}</td>
+            <td> {{ selectedTrip.startTime  }}  </td>
+            <td>  {{ selectedTrip.endTime  }} </td>
+            <td> {{ selectedTrip.startPoint  }} </td>
+            <td> {{ selectedTrip.endPoint  }} </td>
+            <td> <tr v-for="tripnode in selectedTrip.tripNodes ">
 
               <td> {{tripnode.name}} </td>
             </tr>
             </td>
 
-            <td> <tr v-for="customer in sELECTEDTRIP.customers ">
+            <td> <tr v-for="customer in selectedTrip.customers ">
 
               <td> {{customer.name}} </td>
             </tr>
@@ -88,14 +89,14 @@
 
 
 
-<script src="./registration.js">
+<script src="./TripService.js">
 </script>
 
 
 
 </template>
 <style>
-  #eventregistration {
+  #overview {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     color: #2c3e50;
     background: #f2ece8;
