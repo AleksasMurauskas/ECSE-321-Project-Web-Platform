@@ -10,13 +10,7 @@
           	<button @click="selectTrip(trip)"> select</button>
       	</td>
 
-      	<td>
-        	<ul>
-          		<li v-for="customer in trip.customers">
-           		 {{customer.name}}
-          		</li>
-        	</ul>
-      	</td>
+
 
 
   	  </tr>
