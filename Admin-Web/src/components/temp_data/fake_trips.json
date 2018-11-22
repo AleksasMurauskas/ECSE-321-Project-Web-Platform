@@ -1,0 +1,2529 @@
+[
+  {
+    "id": "5bf6493c52e137c591f0221f",
+    "startPoint": "Winnipeg",
+    "endPoint": "New York",
+    "distance": 1000,
+    "active": true,
+    "start_time": 966,
+    "end_time": 1878,
+    "est_Trip_time": 540,
+    "seats_available": 4,
+    "date": "07-08-2018",
+    "compleated": true,
+    "cost_per_customer": 67,
+    "registrations": [
+      {
+        "id": "5bf6493ca8231806cd499e1a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c6ae50836ae064377",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf4194389d0b5c453",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c9f3b1b455dcb7dcd",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8e2ad2bb3a36b478",
+    "startPoint": "Ottawa",
+    "endPoint": "Ottawa",
+    "distance": 104,
+    "active": false,
+    "start_time": 551,
+    "end_time": 1492,
+    "est_Trip_time": 1060,
+    "seats_available": 2,
+    "date": "03-11-2018",
+    "compleated": true,
+    "cost_per_customer": 35,
+    "registrations": [
+      {
+        "id": "5bf6493cdc6f80013aa67b9d",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c5e4dfe82479a5895",
+    "startPoint": "Winnipeg",
+    "endPoint": "Toronto",
+    "distance": 706,
+    "active": false,
+    "start_time": 3,
+    "end_time": 1010,
+    "est_Trip_time": 1391,
+    "seats_available": 0,
+    "date": "23-09-2018",
+    "compleated": false,
+    "cost_per_customer": 87,
+    "registrations": [
+      {
+        "id": "5bf6493ce910f2124a7b7b8c",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cba5a1618759d463a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cda86480d9d28dbc5",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c1dc1c6642c0e65c2",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c397b118ce0083637",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c2e3ebad223aa2d3c",
+    "startPoint": "New York",
+    "endPoint": "Quebec",
+    "distance": 147,
+    "active": false,
+    "start_time": 551,
+    "end_time": 1927,
+    "est_Trip_time": 274,
+    "seats_available": 0,
+    "date": "02-02-2018",
+    "compleated": false,
+    "cost_per_customer": 76,
+    "registrations": [
+      {
+        "id": "5bf6493cbc660d1dbd5f910d",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c8d7d6d2bac95d9ab",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c3a00d091846d5bfc",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c575980c29a66e668",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cffb904935b3a83b5",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ca74c9bc46092827a",
+    "startPoint": "New York",
+    "endPoint": "Winnipeg",
+    "distance": 632,
+    "active": true,
+    "start_time": 695,
+    "end_time": 1832,
+    "est_Trip_time": 325,
+    "seats_available": 0,
+    "date": "08-08-2018",
+    "compleated": false,
+    "cost_per_customer": 100,
+    "registrations": [
+      {
+        "id": "5bf6493c32eb7ac3b738109e",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c672f8351e86999bf",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf61472a61744c04a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c08a67fe64a9194ee",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ce1d1f9f140196797",
+    "startPoint": "Quebec",
+    "endPoint": "Ottawa",
+    "distance": 632,
+    "active": true,
+    "start_time": 571,
+    "end_time": 1025,
+    "est_Trip_time": 1742,
+    "seats_available": 2,
+    "date": "02-06-2018",
+    "compleated": true,
+    "cost_per_customer": 58,
+    "registrations": [
+      {
+        "id": "5bf6493cbed0379ab0e56801",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c13325a92c5868c2d",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cc8dcffd895cbe426",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c9b96c105515d2e0a",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c2e455c57902939d8",
+    "startPoint": "Ottawa",
+    "endPoint": "Quebec",
+    "distance": 556,
+    "active": false,
+    "start_time": 967,
+    "end_time": 1298,
+    "est_Trip_time": 1885,
+    "seats_available": 2,
+    "date": "27-02-2018",
+    "compleated": false,
+    "cost_per_customer": 78,
+    "registrations": [
+      {
+        "id": "5bf6493c9e00a8d2e22eac96",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cc7c4e7d74f1562f8",
+    "startPoint": "Ottawa",
+    "endPoint": "Montreal",
+    "distance": 167,
+    "active": true,
+    "start_time": 117,
+    "end_time": 1733,
+    "est_Trip_time": 1615,
+    "seats_available": 2,
+    "date": "09-04-2018",
+    "compleated": false,
+    "cost_per_customer": 52,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493cf1c31912a4d4693f",
+    "startPoint": "Quebec",
+    "endPoint": "Ottawa",
+    "distance": 785,
+    "active": false,
+    "start_time": 267,
+    "end_time": 1201,
+    "est_Trip_time": 1390,
+    "seats_available": 3,
+    "date": "17-10-2018",
+    "compleated": true,
+    "cost_per_customer": 94,
+    "registrations": [
+      {
+        "id": "5bf6493cd278bbad14610b68",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c20c9118df26d7d45",
+    "startPoint": "Ottawa",
+    "endPoint": "Montreal",
+    "distance": 183,
+    "active": true,
+    "start_time": 678,
+    "end_time": 1458,
+    "est_Trip_time": 260,
+    "seats_available": 4,
+    "date": "17-09-2018",
+    "compleated": false,
+    "cost_per_customer": 10,
+    "registrations": [
+      {
+        "id": "5bf6493c41f66fb6a61cdb2d",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c3a16b1d0f3fbd4e1",
+    "startPoint": "Quebec",
+    "endPoint": "New York",
+    "distance": 545,
+    "active": true,
+    "start_time": 196,
+    "end_time": 1042,
+    "est_Trip_time": 1654,
+    "seats_available": 4,
+    "date": "07-11-2018",
+    "compleated": true,
+    "cost_per_customer": 16,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c15ec6722398d3d66",
+    "startPoint": "Toronto",
+    "endPoint": "Quebec",
+    "distance": 711,
+    "active": true,
+    "start_time": 782,
+    "end_time": 1259,
+    "est_Trip_time": 774,
+    "seats_available": 3,
+    "date": "30-10-2018",
+    "compleated": false,
+    "cost_per_customer": 11,
+    "registrations": [
+      {
+        "id": "5bf6493c55d8964e8bda4d30",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c8fa8af2be02cf3b6",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c2738f71e3525d4d9",
+    "startPoint": "Toronto",
+    "endPoint": "Ottawa",
+    "distance": 395,
+    "active": true,
+    "start_time": 815,
+    "end_time": 1414,
+    "est_Trip_time": 447,
+    "seats_available": 1,
+    "date": "13-07-2018",
+    "compleated": false,
+    "cost_per_customer": 68,
+    "registrations": [
+      {
+        "id": "5bf6493c366d19d1daaf67a6",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf6bb131156cb6ffd",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493ce614cc5210c5cdc0",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cd884f8cebfd69c89",
+    "startPoint": "New York",
+    "endPoint": "Toronto",
+    "distance": 245,
+    "active": false,
+    "start_time": 176,
+    "end_time": 1221,
+    "est_Trip_time": 1676,
+    "seats_available": 0,
+    "date": "05-11-2018",
+    "compleated": true,
+    "cost_per_customer": 34,
+    "registrations": [
+      {
+        "id": "5bf6493ccd6af59b3ec18bc7",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c286499dc8f38eb3f",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cf4a4d6595877e793",
+    "startPoint": "Toronto",
+    "endPoint": "New York",
+    "distance": 531,
+    "active": false,
+    "start_time": 26,
+    "end_time": 1999,
+    "est_Trip_time": 933,
+    "seats_available": 0,
+    "date": "22-08-2018",
+    "compleated": true,
+    "cost_per_customer": 12,
+    "registrations": [
+      {
+        "id": "5bf6493c1f4d3be599dea712",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cdb2a0cac072d43a4",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c43ad6813901fdf4e",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c89d1f2eb8d9e4840",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c513eddc2afca8eea",
+    "startPoint": "Toronto",
+    "endPoint": "Montreal",
+    "distance": 550,
+    "active": true,
+    "start_time": 361,
+    "end_time": 1410,
+    "est_Trip_time": 72,
+    "seats_available": 2,
+    "date": "06-10-2018",
+    "compleated": false,
+    "cost_per_customer": 100,
+    "registrations": [
+      {
+        "id": "5bf6493c4d4f2868c1d882f1",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c548d4bd94f7e2897",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cf425e61e4bd658a1",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c2375fb529a01c131",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c522dc6b117bf2cc9",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c85e4cd27c118f068",
+    "startPoint": "Winnipeg",
+    "endPoint": "Montreal",
+    "distance": 518,
+    "active": true,
+    "start_time": 965,
+    "end_time": 1039,
+    "est_Trip_time": 1026,
+    "seats_available": 3,
+    "date": "01-02-2018",
+    "compleated": false,
+    "cost_per_customer": 43,
+    "registrations": [
+      {
+        "id": "5bf6493c56359c62de33bb0c",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cd38550e746a6ae86",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cfc7e54412a01bbad",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493ca5b4c359b1fe6eaf",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cbf1d98757a29f625",
+    "startPoint": "Toronto",
+    "endPoint": "Winnipeg",
+    "distance": 597,
+    "active": true,
+    "start_time": 414,
+    "end_time": 1884,
+    "est_Trip_time": 1909,
+    "seats_available": 3,
+    "date": "02-03-2018",
+    "compleated": true,
+    "cost_per_customer": 72,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c1e5df2e5f7039fb5",
+    "startPoint": "New York",
+    "endPoint": "Winnipeg",
+    "distance": 109,
+    "active": true,
+    "start_time": 405,
+    "end_time": 1643,
+    "est_Trip_time": 733,
+    "seats_available": 3,
+    "date": "08-02-2018",
+    "compleated": true,
+    "cost_per_customer": 90,
+    "registrations": [
+      {
+        "id": "5bf6493c756185beced41696",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c93a397d6c584ec8a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cd22dff1f329ab561",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c38041ebd85eb71a9",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cd7ebb21bc5cb7d5a",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c4838bd97c49f0b5a",
+    "startPoint": "Montreal",
+    "endPoint": "Montreal",
+    "distance": 600,
+    "active": false,
+    "start_time": 549,
+    "end_time": 1298,
+    "est_Trip_time": 1794,
+    "seats_available": 3,
+    "date": "03-02-2018",
+    "compleated": true,
+    "cost_per_customer": 100,
+    "registrations": [
+      {
+        "id": "5bf6493cde044328ccf6cd33",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ce5998ec0837f07c8",
+    "startPoint": "Winnipeg",
+    "endPoint": "Winnipeg",
+    "distance": 587,
+    "active": true,
+    "start_time": 113,
+    "end_time": 1171,
+    "est_Trip_time": 1334,
+    "seats_available": 3,
+    "date": "09-09-2018",
+    "compleated": true,
+    "cost_per_customer": 43,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c0218e0231f3d40c3",
+    "startPoint": "Ottawa",
+    "endPoint": "Winnipeg",
+    "distance": 509,
+    "active": false,
+    "start_time": 146,
+    "end_time": 1614,
+    "est_Trip_time": 46,
+    "seats_available": 1,
+    "date": "07-11-2018",
+    "compleated": false,
+    "cost_per_customer": 71,
+    "registrations": [
+      {
+        "id": "5bf6493ca311f121be471b1f",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c6adf28016d5f8ac8",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c6518e6dd4226170c",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cc2a39e3564631c61",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c72e0d717f712ee7b",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c6612d132407498ab",
+    "startPoint": "Winnipeg",
+    "endPoint": "Winnipeg",
+    "distance": 32,
+    "active": false,
+    "start_time": 158,
+    "end_time": 1324,
+    "est_Trip_time": 1791,
+    "seats_available": 0,
+    "date": "01-06-2018",
+    "compleated": false,
+    "cost_per_customer": 36,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c7677513d28da83d1",
+    "startPoint": "Montreal",
+    "endPoint": "Toronto",
+    "distance": 41,
+    "active": false,
+    "start_time": 332,
+    "end_time": 1298,
+    "est_Trip_time": 1523,
+    "seats_available": 1,
+    "date": "25-06-2018",
+    "compleated": false,
+    "cost_per_customer": 84,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c4d983259a67eb9b2",
+    "startPoint": "Toronto",
+    "endPoint": "Quebec",
+    "distance": 161,
+    "active": false,
+    "start_time": 158,
+    "end_time": 1187,
+    "est_Trip_time": 1861,
+    "seats_available": 1,
+    "date": "06-10-2018",
+    "compleated": false,
+    "cost_per_customer": 50,
+    "registrations": [
+      {
+        "id": "5bf6493cfcb4c1387ee603c9",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c2879adce07d874bc",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c9fcf6c73ad2cde62",
+    "startPoint": "Ottawa",
+    "endPoint": "Ottawa",
+    "distance": 861,
+    "active": false,
+    "start_time": 281,
+    "end_time": 1670,
+    "est_Trip_time": 698,
+    "seats_available": 1,
+    "date": "12-07-2018",
+    "compleated": false,
+    "cost_per_customer": 34,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c5daa9c47521accef",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 21,
+    "active": true,
+    "start_time": 277,
+    "end_time": 1664,
+    "est_Trip_time": 1621,
+    "seats_available": 3,
+    "date": "25-09-2018",
+    "compleated": false,
+    "cost_per_customer": 48,
+    "registrations": [
+      {
+        "id": "5bf6493c59ae70c921526d07",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c34ed9b28ce4e75c2",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c014c639f7d31296a",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8ae48829062b7149",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 909,
+    "active": true,
+    "start_time": 696,
+    "end_time": 1409,
+    "est_Trip_time": 1869,
+    "seats_available": 4,
+    "date": "25-10-2018",
+    "compleated": false,
+    "cost_per_customer": 43,
+    "registrations": [
+      {
+        "id": "5bf6493c9e9992f054d8d420",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c20acc25230a74d6c",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c93d6823fd90b6ef4",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c6a9734220af2e643",
+    "startPoint": "Quebec",
+    "endPoint": "Quebec",
+    "distance": 460,
+    "active": true,
+    "start_time": 509,
+    "end_time": 1718,
+    "est_Trip_time": 754,
+    "seats_available": 1,
+    "date": "01-09-2018",
+    "compleated": false,
+    "cost_per_customer": 85,
+    "registrations": [
+      {
+        "id": "5bf6493c4e13dd4a34300e93",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c4854fc52b9784fc0",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c107f35680f0d989b",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c1b41811963e65aaa",
+    "startPoint": "Winnipeg",
+    "endPoint": "Quebec",
+    "distance": 613,
+    "active": true,
+    "start_time": 247,
+    "end_time": 1911,
+    "est_Trip_time": 183,
+    "seats_available": 2,
+    "date": "01-10-2018",
+    "compleated": true,
+    "cost_per_customer": 4,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c430149027623fc7e",
+    "startPoint": "Toronto",
+    "endPoint": "New York",
+    "distance": 135,
+    "active": false,
+    "start_time": 399,
+    "end_time": 1652,
+    "est_Trip_time": 242,
+    "seats_available": 3,
+    "date": "12-09-2018",
+    "compleated": false,
+    "cost_per_customer": 95,
+    "registrations": [
+      {
+        "id": "5bf6493c49fd827527414d44",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c8f5b885c1222a492",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c824ac67737b7b1c3",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c20813fe5cbd94625",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c044dc1bbe3395e7f",
+    "startPoint": "Montreal",
+    "endPoint": "Ottawa",
+    "distance": 745,
+    "active": true,
+    "start_time": 508,
+    "end_time": 1128,
+    "est_Trip_time": 1039,
+    "seats_available": 3,
+    "date": "04-05-2018",
+    "compleated": true,
+    "cost_per_customer": 9,
+    "registrations": [
+      {
+        "id": "5bf6493c3c9812f3a8254e3a",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cb6887634dfde2533",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493ca3b652b32c0c8e8b",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c3c2b19c26a965eb7",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c98dfd1f0fd2915be",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cc535dd725630226d",
+    "startPoint": "Quebec",
+    "endPoint": "Toronto",
+    "distance": 716,
+    "active": true,
+    "start_time": 890,
+    "end_time": 1026,
+    "est_Trip_time": 1128,
+    "seats_available": 1,
+    "date": "23-05-2018",
+    "compleated": true,
+    "cost_per_customer": 86,
+    "registrations": [
+      {
+        "id": "5bf6493ca933f11ca2de6bad",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c34c763bf60b5fb21",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c7b6cb1a17f624c07",
+    "startPoint": "Ottawa",
+    "endPoint": "Montreal",
+    "distance": 425,
+    "active": true,
+    "start_time": 48,
+    "end_time": 1389,
+    "est_Trip_time": 892,
+    "seats_available": 1,
+    "date": "15-11-2018",
+    "compleated": false,
+    "cost_per_customer": 48,
+    "registrations": [
+      {
+        "id": "5bf6493c675cae8d1b287c42",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c956758a577bab580",
+    "startPoint": "New York",
+    "endPoint": "New York",
+    "distance": 534,
+    "active": false,
+    "start_time": 432,
+    "end_time": 1501,
+    "est_Trip_time": 1310,
+    "seats_available": 3,
+    "date": "02-09-2018",
+    "compleated": false,
+    "cost_per_customer": 0,
+    "registrations": [
+      {
+        "id": "5bf6493c51c05e41603f018d",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c2f03787bc00930c8",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c7868d4fbbf3a083c",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c28de4f7e489d439e",
+    "startPoint": "Toronto",
+    "endPoint": "Winnipeg",
+    "distance": 561,
+    "active": false,
+    "start_time": 714,
+    "end_time": 1609,
+    "est_Trip_time": 329,
+    "seats_available": 4,
+    "date": "04-04-2018",
+    "compleated": false,
+    "cost_per_customer": 16,
+    "registrations": [
+      {
+        "id": "5bf6493cad3a2ac9167e53a8",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c62335500ad8edaae",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c67bf09b0ed602ba7",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c7c8d48b632006256",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c08285ffd85a81e31",
+    "startPoint": "Montreal",
+    "endPoint": "Montreal",
+    "distance": 511,
+    "active": true,
+    "start_time": 523,
+    "end_time": 1914,
+    "est_Trip_time": 222,
+    "seats_available": 0,
+    "date": "15-07-2018",
+    "compleated": false,
+    "cost_per_customer": 62,
+    "registrations": [
+      {
+        "id": "5bf6493ca84644b5b6470745",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c9b5e8a8b0ef73d5d",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8472cf22d0559100",
+    "startPoint": "Quebec",
+    "endPoint": "New York",
+    "distance": 89,
+    "active": false,
+    "start_time": 398,
+    "end_time": 1031,
+    "est_Trip_time": 620,
+    "seats_available": 2,
+    "date": "05-03-2018",
+    "compleated": false,
+    "cost_per_customer": 52,
+    "registrations": [
+      {
+        "id": "5bf6493cd3eb97ead5283402",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cc696b9f76cedf558",
+    "startPoint": "Toronto",
+    "endPoint": "Toronto",
+    "distance": 22,
+    "active": false,
+    "start_time": 936,
+    "end_time": 1783,
+    "est_Trip_time": 15,
+    "seats_available": 2,
+    "date": "26-09-2018",
+    "compleated": true,
+    "cost_per_customer": 22,
+    "registrations": [
+      {
+        "id": "5bf6493c2693374e9270477e",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c3f620b08734e9b7f",
+    "startPoint": "Quebec",
+    "endPoint": "New York",
+    "distance": 809,
+    "active": false,
+    "start_time": 545,
+    "end_time": 1444,
+    "est_Trip_time": 1780,
+    "seats_available": 1,
+    "date": "20-09-2018",
+    "compleated": true,
+    "cost_per_customer": 13,
+    "registrations": [
+      {
+        "id": "5bf6493cb181d312da1cb9e8",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c3211fae62c0849b6",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ceb2a9a881cced406",
+    "startPoint": "New York",
+    "endPoint": "New York",
+    "distance": 104,
+    "active": true,
+    "start_time": 498,
+    "end_time": 1308,
+    "est_Trip_time": 1895,
+    "seats_available": 1,
+    "date": "15-02-2018",
+    "compleated": false,
+    "cost_per_customer": 52,
+    "registrations": [
+      {
+        "id": "5bf6493c7ac623c463dacc23",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c70678ce4f585bf5e",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c0a73eeec1e159aa4",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c8c0221ac8c5137a4",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c193bac69df4cf732",
+    "startPoint": "Quebec",
+    "endPoint": "Winnipeg",
+    "distance": 25,
+    "active": false,
+    "start_time": 178,
+    "end_time": 1167,
+    "est_Trip_time": 1918,
+    "seats_available": 3,
+    "date": "09-04-2018",
+    "compleated": true,
+    "cost_per_customer": 79,
+    "registrations": [
+      {
+        "id": "5bf6493c09b43d094a98244f",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c00f79e1a8873e635",
+    "startPoint": "Montreal",
+    "endPoint": "Ottawa",
+    "distance": 460,
+    "active": true,
+    "start_time": 693,
+    "end_time": 1141,
+    "est_Trip_time": 1649,
+    "seats_available": 0,
+    "date": "18-06-2018",
+    "compleated": true,
+    "cost_per_customer": 56,
+    "registrations": [
+      {
+        "id": "5bf6493c3d38d62e4c66a890",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c694f42112c837e42",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cf4c679072db2e9d9",
+    "startPoint": "Quebec",
+    "endPoint": "Montreal",
+    "distance": 886,
+    "active": false,
+    "start_time": 562,
+    "end_time": 1187,
+    "est_Trip_time": 562,
+    "seats_available": 1,
+    "date": "27-10-2018",
+    "compleated": false,
+    "cost_per_customer": 35,
+    "registrations": [
+      {
+        "id": "5bf6493c963141f692f205af",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c81458d35e6df7ed6",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cc8d921de239a11bd",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cc63985e940d2f0ac",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c6a1174cea99797a9",
+    "startPoint": "Toronto",
+    "endPoint": "Ottawa",
+    "distance": 555,
+    "active": false,
+    "start_time": 479,
+    "end_time": 1744,
+    "est_Trip_time": 1063,
+    "seats_available": 3,
+    "date": "25-02-2018",
+    "compleated": true,
+    "cost_per_customer": 28,
+    "registrations": [
+      {
+        "id": "5bf6493c1c8483628e65c3bd",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c2bd7b90ac1b51bde",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c93003db49d569adf",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c31fede98f677f5e4",
+    "startPoint": "Montreal",
+    "endPoint": "Toronto",
+    "distance": 651,
+    "active": true,
+    "start_time": 17,
+    "end_time": 1188,
+    "est_Trip_time": 771,
+    "seats_available": 4,
+    "date": "03-10-2018",
+    "compleated": false,
+    "cost_per_customer": 24,
+    "registrations": [
+      {
+        "id": "5bf6493c688f543286582ec1",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cbac3bf5becf4fd8a",
+    "startPoint": "Winnipeg",
+    "endPoint": "Ottawa",
+    "distance": 944,
+    "active": false,
+    "start_time": 934,
+    "end_time": 1053,
+    "est_Trip_time": 2000,
+    "seats_available": 2,
+    "date": "01-09-2018",
+    "compleated": false,
+    "cost_per_customer": 67,
+    "registrations": [
+      {
+        "id": "5bf6493cd9c96d92bea07f3d",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c5a523dd88411496d",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c1bd78503a73e40c6",
+    "startPoint": "Ottawa",
+    "endPoint": "Ottawa",
+    "distance": 571,
+    "active": true,
+    "start_time": 621,
+    "end_time": 1625,
+    "est_Trip_time": 30,
+    "seats_available": 2,
+    "date": "30-04-2018",
+    "compleated": true,
+    "cost_per_customer": 20,
+    "registrations": [
+      {
+        "id": "5bf6493c18492cad71bbe7cb",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cd0d871cdcc8447ef",
+    "startPoint": "New York",
+    "endPoint": "Winnipeg",
+    "distance": 177,
+    "active": true,
+    "start_time": 512,
+    "end_time": 1067,
+    "est_Trip_time": 1993,
+    "seats_available": 2,
+    "date": "28-05-2018",
+    "compleated": false,
+    "cost_per_customer": 56,
+    "registrations": [
+      {
+        "id": "5bf6493c164952a962e5c7df",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cf1687b10ab83d194",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c7fd22f10033c39ae",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c20d1c84cd9a5869d",
+    "startPoint": "Winnipeg",
+    "endPoint": "Winnipeg",
+    "distance": 996,
+    "active": false,
+    "start_time": 14,
+    "end_time": 1033,
+    "est_Trip_time": 262,
+    "seats_available": 1,
+    "date": "01-10-2018",
+    "compleated": true,
+    "cost_per_customer": 64,
+    "registrations": [
+      {
+        "id": "5bf6493ca3d65d70b4a40fc3",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c3c9fcdba26221ba2",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c4c1d32d4ec53a351",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cdb81158ac15f763e",
+    "startPoint": "Montreal",
+    "endPoint": "New York",
+    "distance": 804,
+    "active": true,
+    "start_time": 930,
+    "end_time": 1085,
+    "est_Trip_time": 475,
+    "seats_available": 2,
+    "date": "23-02-2018",
+    "compleated": true,
+    "cost_per_customer": 4,
+    "registrations": [
+      {
+        "id": "5bf6493ced6be583075d68f5",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c63da0f268e9b4720",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c45d3ad93be319960",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cdd66124fbdb8dea0",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c27a8b27585917641",
+    "startPoint": "New York",
+    "endPoint": "Quebec",
+    "distance": 8,
+    "active": false,
+    "start_time": 248,
+    "end_time": 1848,
+    "est_Trip_time": 1161,
+    "seats_available": 0,
+    "date": "17-08-2018",
+    "compleated": true,
+    "cost_per_customer": 67,
+    "registrations": [
+      {
+        "id": "5bf6493cbfc607907020cc36",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c8036e81ee3604133",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cef8d3d54ca5ee96f",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c816450542c62bc3b",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493ceb4b60a2c8ab8ef2",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c006c865b2c398874",
+    "startPoint": "Ottawa",
+    "endPoint": "Ottawa",
+    "distance": 787,
+    "active": true,
+    "start_time": 793,
+    "end_time": 1412,
+    "est_Trip_time": 1589,
+    "seats_available": 1,
+    "date": "15-07-2018",
+    "compleated": false,
+    "cost_per_customer": 88,
+    "registrations": [
+      {
+        "id": "5bf6493c180f5e8dfa6374b4",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cbdf3c3aeab24224e",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cbeab216e57c171f0",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c740bd3660922edb1",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c1fc610e308fc8fd5",
+    "startPoint": "New York",
+    "endPoint": "New York",
+    "distance": 377,
+    "active": false,
+    "start_time": 203,
+    "end_time": 1672,
+    "est_Trip_time": 957,
+    "seats_available": 0,
+    "date": "20-09-2018",
+    "compleated": false,
+    "cost_per_customer": 24,
+    "registrations": [
+      {
+        "id": "5bf6493c2a0c340bfd944c93",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c28074b8098846c78",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cbabcdd5669125b0b",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c937fb06364e19af2",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c9e66b5e94e744709",
+    "startPoint": "Montreal",
+    "endPoint": "Ottawa",
+    "distance": 685,
+    "active": true,
+    "start_time": 201,
+    "end_time": 1223,
+    "est_Trip_time": 821,
+    "seats_available": 0,
+    "date": "21-05-2018",
+    "compleated": false,
+    "cost_per_customer": 93,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493ccf903368d5f36fd7",
+    "startPoint": "Quebec",
+    "endPoint": "Ottawa",
+    "distance": 624,
+    "active": false,
+    "start_time": 152,
+    "end_time": 1919,
+    "est_Trip_time": 777,
+    "seats_available": 1,
+    "date": "05-10-2018",
+    "compleated": false,
+    "cost_per_customer": 7,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c43f7ba72b0e75593",
+    "startPoint": "Toronto",
+    "endPoint": "Montreal",
+    "distance": 227,
+    "active": false,
+    "start_time": 844,
+    "end_time": 1740,
+    "est_Trip_time": 751,
+    "seats_available": 4,
+    "date": "27-08-2018",
+    "compleated": false,
+    "cost_per_customer": 45,
+    "registrations": [
+      {
+        "id": "5bf6493c78ab48a86e0b9076",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cf05879552a6044b9",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c7b52c28ed593c5fa",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cc14756ae7b11e692",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cc12773b0fd8728f0",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c759e0f275b481530",
+    "startPoint": "Quebec",
+    "endPoint": "Toronto",
+    "distance": 490,
+    "active": false,
+    "start_time": 795,
+    "end_time": 1211,
+    "est_Trip_time": 413,
+    "seats_available": 2,
+    "date": "08-04-2018",
+    "compleated": true,
+    "cost_per_customer": 65,
+    "registrations": [
+      {
+        "id": "5bf6493ccef5ae0dc345b3de",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c5ca646bcb57a25cb",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c29e77b65309536c5",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c56b5707f25177e10",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ca5d6e9771df22bf7",
+    "startPoint": "New York",
+    "endPoint": "Toronto",
+    "distance": 740,
+    "active": true,
+    "start_time": 919,
+    "end_time": 1911,
+    "est_Trip_time": 704,
+    "seats_available": 2,
+    "date": "16-09-2018",
+    "compleated": true,
+    "cost_per_customer": 77,
+    "registrations": [
+      {
+        "id": "5bf6493c72a46136e0030d69",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cd02575b97b071371",
+    "startPoint": "Winnipeg",
+    "endPoint": "Toronto",
+    "distance": 819,
+    "active": false,
+    "start_time": 696,
+    "end_time": 1788,
+    "est_Trip_time": 1763,
+    "seats_available": 2,
+    "date": "06-08-2018",
+    "compleated": true,
+    "cost_per_customer": 45,
+    "registrations": [
+      {
+        "id": "5bf6493caeffd4127483c58a",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c62c716c368c54bdc",
+    "startPoint": "New York",
+    "endPoint": "Winnipeg",
+    "distance": 55,
+    "active": true,
+    "start_time": 635,
+    "end_time": 1131,
+    "est_Trip_time": 684,
+    "seats_available": 2,
+    "date": "07-02-2018",
+    "compleated": true,
+    "cost_per_customer": 18,
+    "registrations": [
+      {
+        "id": "5bf6493cf2d6d85fb10a626c",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c825595f6f659c3f9",
+    "startPoint": "Ottawa",
+    "endPoint": "Winnipeg",
+    "distance": 224,
+    "active": false,
+    "start_time": 26,
+    "end_time": 1841,
+    "est_Trip_time": 423,
+    "seats_available": 4,
+    "date": "10-03-2018",
+    "compleated": true,
+    "cost_per_customer": 27,
+    "registrations": [
+      {
+        "id": "5bf6493c076189c9e541f54d",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c35933a585e1019a6",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cae6d6317e012a5d0",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c4b1bff7637bb9524",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493ce16573bfd31d597e",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c944529290977f950",
+    "startPoint": "Ottawa",
+    "endPoint": "Quebec",
+    "distance": 596,
+    "active": false,
+    "start_time": 165,
+    "end_time": 1970,
+    "est_Trip_time": 1939,
+    "seats_available": 2,
+    "date": "01-02-2018",
+    "compleated": true,
+    "cost_per_customer": 92,
+    "registrations": [
+      {
+        "id": "5bf6493c1cdcb0a5c190c68e",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cacfe8bcabb35cead",
+    "startPoint": "Winnipeg",
+    "endPoint": "Quebec",
+    "distance": 831,
+    "active": false,
+    "start_time": 154,
+    "end_time": 1710,
+    "est_Trip_time": 1556,
+    "seats_available": 3,
+    "date": "23-03-2018",
+    "compleated": true,
+    "cost_per_customer": 58,
+    "registrations": [
+      {
+        "id": "5bf6493c3a02f929b9f40f94",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c962e27a5fcbe2efa",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c5b72011f7d7e8fb1",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c900e429011c7d977",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf5d1c37ec8bac64f",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c70ae538b545487c3",
+    "startPoint": "Winnipeg",
+    "endPoint": "New York",
+    "distance": 971,
+    "active": true,
+    "start_time": 117,
+    "end_time": 1715,
+    "est_Trip_time": 444,
+    "seats_available": 4,
+    "date": "02-11-2018",
+    "compleated": true,
+    "cost_per_customer": 69,
+    "registrations": [
+      {
+        "id": "5bf6493cbdc126f0c6ef9444",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c5c883c6dbf40a9b3",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8d0f948bec1083d9",
+    "startPoint": "Ottawa",
+    "endPoint": "Ottawa",
+    "distance": 77,
+    "active": true,
+    "start_time": 4,
+    "end_time": 1200,
+    "est_Trip_time": 525,
+    "seats_available": 2,
+    "date": "20-11-2018",
+    "compleated": false,
+    "cost_per_customer": 78,
+    "registrations": [
+      {
+        "id": "5bf6493c84f87e7df42151e3",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf06d2dd943198d65",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cbe7beae56ded8f76",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c40ed84dbd5a9e5b1",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c64ded8e9402903eb",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ce89284d9ae8a4297",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 344,
+    "active": false,
+    "start_time": 339,
+    "end_time": 1663,
+    "est_Trip_time": 757,
+    "seats_available": 2,
+    "date": "05-11-2018",
+    "compleated": true,
+    "cost_per_customer": 15,
+    "registrations": [
+      {
+        "id": "5bf6493c176a14eac0469d26",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cbd76f79eefd13cad",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cac640af7a892fd66",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cc6163cce02f9b991",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ca5cfb2c580da11b7",
+    "startPoint": "Ottawa",
+    "endPoint": "Quebec",
+    "distance": 658,
+    "active": true,
+    "start_time": 593,
+    "end_time": 1265,
+    "est_Trip_time": 582,
+    "seats_available": 2,
+    "date": "01-04-2018",
+    "compleated": false,
+    "cost_per_customer": 72,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c23e5b335b7ef99f8",
+    "startPoint": "Montreal",
+    "endPoint": "Ottawa",
+    "distance": 258,
+    "active": true,
+    "start_time": 273,
+    "end_time": 1829,
+    "est_Trip_time": 1822,
+    "seats_available": 3,
+    "date": "04-04-2018",
+    "compleated": false,
+    "cost_per_customer": 46,
+    "registrations": [
+      {
+        "id": "5bf6493c8bda960785f5ce32",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c843730dc6d3f5eac",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf18348ca7062f8db",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cdfba330fcb3cd805",
+    "startPoint": "Winnipeg",
+    "endPoint": "Montreal",
+    "distance": 566,
+    "active": true,
+    "start_time": 60,
+    "end_time": 1595,
+    "est_Trip_time": 1471,
+    "seats_available": 2,
+    "date": "16-04-2018",
+    "compleated": true,
+    "cost_per_customer": 72,
+    "registrations": [
+      {
+        "id": "5bf6493c9b0d0b92d4336a1d",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c07e48b205c8488e5",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c6882f378febd2795",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c031aa21785afbc2a",
+    "startPoint": "New York",
+    "endPoint": "Ottawa",
+    "distance": 625,
+    "active": true,
+    "start_time": 393,
+    "end_time": 1430,
+    "est_Trip_time": 1630,
+    "seats_available": 4,
+    "date": "11-02-2018",
+    "compleated": false,
+    "cost_per_customer": 42,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c7612889f70fc0cca",
+    "startPoint": "Toronto",
+    "endPoint": "Ottawa",
+    "distance": 404,
+    "active": false,
+    "start_time": 71,
+    "end_time": 1671,
+    "est_Trip_time": 1164,
+    "seats_available": 1,
+    "date": "04-05-2018",
+    "compleated": true,
+    "cost_per_customer": 73,
+    "registrations": [
+      {
+        "id": "5bf6493c60faba5d68973b27",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c0c21fa6cc9cdefcc",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c5d01f07be54b0801",
+    "startPoint": "Ottawa",
+    "endPoint": "Quebec",
+    "distance": 647,
+    "active": true,
+    "start_time": 715,
+    "end_time": 1108,
+    "est_Trip_time": 1794,
+    "seats_available": 0,
+    "date": "10-04-2018",
+    "compleated": true,
+    "cost_per_customer": 58,
+    "registrations": [
+      {
+        "id": "5bf6493cadf509f1e184207c",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493ccd96c9a71984525d",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c4c00f0a84cadc57a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c3b2b60da9d2c70a6",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cb858e214dc95e297",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c0697d9cb62e4fe19",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 559,
+    "active": true,
+    "start_time": 913,
+    "end_time": 1901,
+    "est_Trip_time": 583,
+    "seats_available": 4,
+    "date": "11-02-2018",
+    "compleated": true,
+    "cost_per_customer": 22,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c3f72d31a5f1a7d38",
+    "startPoint": "Winnipeg",
+    "endPoint": "Ottawa",
+    "distance": 755,
+    "active": true,
+    "start_time": 895,
+    "end_time": 1031,
+    "est_Trip_time": 129,
+    "seats_available": 0,
+    "date": "02-11-2018",
+    "compleated": false,
+    "cost_per_customer": 42,
+    "registrations": [
+      {
+        "id": "5bf6493c30b67c81650f6d53",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cb82e48c684453c90",
+    "startPoint": "Quebec",
+    "endPoint": "Ottawa",
+    "distance": 544,
+    "active": true,
+    "start_time": 399,
+    "end_time": 1400,
+    "est_Trip_time": 13,
+    "seats_available": 4,
+    "date": "19-02-2018",
+    "compleated": true,
+    "cost_per_customer": 35,
+    "registrations": [
+      {
+        "id": "5bf6493c97b7e9cc3b3627fa",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c7cb6e4105d3fe46e",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c4c9ba8cd1ce39701",
+    "startPoint": "Winnipeg",
+    "endPoint": "Quebec",
+    "distance": 508,
+    "active": false,
+    "start_time": 872,
+    "end_time": 1631,
+    "est_Trip_time": 1100,
+    "seats_available": 2,
+    "date": "17-03-2018",
+    "compleated": true,
+    "cost_per_customer": 34,
+    "registrations": [
+      {
+        "id": "5bf6493cc6e90772021af098",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493ccd3b0d9f6766225a",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c3fc56cb303b42d3c",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cbaa257000f027866",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c870a63b1e71db63e",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cad8be12310a468f7",
+    "startPoint": "New York",
+    "endPoint": "Ottawa",
+    "distance": 982,
+    "active": false,
+    "start_time": 798,
+    "end_time": 1129,
+    "est_Trip_time": 50,
+    "seats_available": 3,
+    "date": "10-10-2018",
+    "compleated": false,
+    "cost_per_customer": 87,
+    "registrations": [
+      {
+        "id": "5bf6493c8d3b06861ae84c5d",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c5d2dffd96f408ecf",
+    "startPoint": "Quebec",
+    "endPoint": "Quebec",
+    "distance": 653,
+    "active": false,
+    "start_time": 744,
+    "end_time": 1412,
+    "est_Trip_time": 1860,
+    "seats_available": 4,
+    "date": "14-03-2018",
+    "compleated": true,
+    "cost_per_customer": 42,
+    "registrations": [
+      {
+        "id": "5bf6493c63e282556f7fdc1c",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c292cab741c77d7fb",
+    "startPoint": "Ottawa",
+    "endPoint": "Montreal",
+    "distance": 185,
+    "active": false,
+    "start_time": 617,
+    "end_time": 1559,
+    "est_Trip_time": 1965,
+    "seats_available": 3,
+    "date": "08-10-2018",
+    "compleated": false,
+    "cost_per_customer": 56,
+    "registrations": [
+      {
+        "id": "5bf6493c5119f1ae42d23c40",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8ce4ec98098b4c75",
+    "startPoint": "New York",
+    "endPoint": "Winnipeg",
+    "distance": 803,
+    "active": true,
+    "start_time": 128,
+    "end_time": 1219,
+    "est_Trip_time": 818,
+    "seats_available": 4,
+    "date": "20-07-2018",
+    "compleated": false,
+    "cost_per_customer": 69,
+    "registrations": [
+      {
+        "id": "5bf6493c8f08ef870b7a7689",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c6328ebc65845f239",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493ceaf84e5cfdce7721",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c70a3e50e4f1e7edd",
+    "startPoint": "Toronto",
+    "endPoint": "Winnipeg",
+    "distance": 585,
+    "active": false,
+    "start_time": 706,
+    "end_time": 1720,
+    "est_Trip_time": 1767,
+    "seats_available": 3,
+    "date": "30-10-2018",
+    "compleated": true,
+    "cost_per_customer": 41,
+    "registrations": [
+      {
+        "id": "5bf6493c5239eea0565199f9",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c27dad64c2c8ad31b",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c35de9ea140842e1a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cdc8daeccb35ea453",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ceb214b2656a02ec3",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 123,
+    "active": false,
+    "start_time": 933,
+    "end_time": 1865,
+    "est_Trip_time": 1132,
+    "seats_available": 4,
+    "date": "10-04-2018",
+    "compleated": false,
+    "cost_per_customer": 41,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493cf5e522aabb30a70c",
+    "startPoint": "Montreal",
+    "endPoint": "New York",
+    "distance": 889,
+    "active": true,
+    "start_time": 942,
+    "end_time": 1116,
+    "est_Trip_time": 878,
+    "seats_available": 4,
+    "date": "15-09-2018",
+    "compleated": false,
+    "cost_per_customer": 40,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c25a8312742848181",
+    "startPoint": "Toronto",
+    "endPoint": "New York",
+    "distance": 392,
+    "active": true,
+    "start_time": 759,
+    "end_time": 1943,
+    "est_Trip_time": 1917,
+    "seats_available": 2,
+    "date": "01-03-2018",
+    "compleated": true,
+    "cost_per_customer": 4,
+    "registrations": [
+      {
+        "id": "5bf6493c4f7504a98579f872",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c7f01dd4f13b7f4af",
+    "startPoint": "New York",
+    "endPoint": "New York",
+    "distance": 901,
+    "active": true,
+    "start_time": 102,
+    "end_time": 1407,
+    "est_Trip_time": 148,
+    "seats_available": 3,
+    "date": "04-11-2018",
+    "compleated": true,
+    "cost_per_customer": 51,
+    "registrations": [
+      {
+        "id": "5bf6493c80af6cf430203475",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cfc520236220ce1df",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cdb5c9493f3d2d075",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c745b2898a9c80f40",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c2c150236db7b6aa8",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493ca386049cf58fb3be",
+    "startPoint": "New York",
+    "endPoint": "Quebec",
+    "distance": 478,
+    "active": false,
+    "start_time": 297,
+    "end_time": 1335,
+    "est_Trip_time": 852,
+    "seats_available": 4,
+    "date": "09-03-2018",
+    "compleated": true,
+    "cost_per_customer": 72,
+    "registrations": [
+      {
+        "id": "5bf6493c6fbbf9843a49d2a6",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c9f85f5d574e53d3e",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c44faea596c2e3bee",
+    "startPoint": "Ottawa",
+    "endPoint": "Montreal",
+    "distance": 228,
+    "active": true,
+    "start_time": 164,
+    "end_time": 1162,
+    "est_Trip_time": 1789,
+    "seats_available": 4,
+    "date": "19-06-2018",
+    "compleated": true,
+    "cost_per_customer": 15,
+    "registrations": [
+      {
+        "id": "5bf6493ccfdbf4300019ca76",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c21b7ba71cbbf8405",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c3168b734ed27d806",
+    "startPoint": "New York",
+    "endPoint": "Toronto",
+    "distance": 269,
+    "active": false,
+    "start_time": 594,
+    "end_time": 1890,
+    "est_Trip_time": 636,
+    "seats_available": 1,
+    "date": "19-09-2018",
+    "compleated": true,
+    "cost_per_customer": 14,
+    "registrations": [
+      {
+        "id": "5bf6493cedc72f2fbfafb263",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cb2d33b62c376961f",
+    "startPoint": "Winnipeg",
+    "endPoint": "Quebec",
+    "distance": 242,
+    "active": false,
+    "start_time": 434,
+    "end_time": 1529,
+    "est_Trip_time": 1546,
+    "seats_available": 1,
+    "date": "12-04-2018",
+    "compleated": true,
+    "cost_per_customer": 5,
+    "registrations": [
+      {
+        "id": "5bf6493cd4040042fcc01dcf",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c1293850731c28443",
+    "startPoint": "New York",
+    "endPoint": "Toronto",
+    "distance": 898,
+    "active": true,
+    "start_time": 686,
+    "end_time": 1600,
+    "est_Trip_time": 54,
+    "seats_available": 2,
+    "date": "02-06-2018",
+    "compleated": false,
+    "cost_per_customer": 93,
+    "registrations": [
+      {
+        "id": "5bf6493c412e6097e98f3c47",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c9c05910695134958",
+    "startPoint": "Montreal",
+    "endPoint": "Winnipeg",
+    "distance": 631,
+    "active": true,
+    "start_time": 577,
+    "end_time": 1755,
+    "est_Trip_time": 54,
+    "seats_available": 3,
+    "date": "10-05-2018",
+    "compleated": false,
+    "cost_per_customer": 4,
+    "registrations": [
+      {
+        "id": "5bf6493c39e03443292fcd11",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c08d7c235c971e7b0",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c71f4b1aef90715ac",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c6caac1d434282961",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c0a22f1edfab0fffb",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 97,
+    "active": false,
+    "start_time": 556,
+    "end_time": 1413,
+    "est_Trip_time": 1517,
+    "seats_available": 3,
+    "date": "21-09-2018",
+    "compleated": false,
+    "cost_per_customer": 69,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493cc05e00cef7b36ef7",
+    "startPoint": "Montreal",
+    "endPoint": "New York",
+    "distance": 516,
+    "active": true,
+    "start_time": 377,
+    "end_time": 1768,
+    "est_Trip_time": 574,
+    "seats_available": 3,
+    "date": "12-11-2018",
+    "compleated": true,
+    "cost_per_customer": 3,
+    "registrations": []
+  },
+  {
+    "id": "5bf6493c1fa84d4a282da7b1",
+    "startPoint": "Quebec",
+    "endPoint": "Winnipeg",
+    "distance": 635,
+    "active": true,
+    "start_time": 596,
+    "end_time": 1527,
+    "est_Trip_time": 1405,
+    "seats_available": 4,
+    "date": "15-03-2018",
+    "compleated": false,
+    "cost_per_customer": 10,
+    "registrations": [
+      {
+        "id": "5bf6493c6ea96eabb1932a53",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493ca1ea9b1d2c54d789",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c7592f98cb7f32c94",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c9fb8b9805bb4ac21",
+    "startPoint": "Winnipeg",
+    "endPoint": "New York",
+    "distance": 349,
+    "active": false,
+    "start_time": 241,
+    "end_time": 1817,
+    "est_Trip_time": 714,
+    "seats_available": 2,
+    "date": "19-07-2018",
+    "compleated": true,
+    "cost_per_customer": 6,
+    "registrations": [
+      {
+        "id": "5bf6493c2f57a1d2f5b9062a",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c6f70150c583287d3",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493ca863dbc30de6c12d",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cc500bb90983b9bd7",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c854cb268f04b6d96",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493cd198e60ee4623f1a",
+    "startPoint": "New York",
+    "endPoint": "Montreal",
+    "distance": 490,
+    "active": true,
+    "start_time": 351,
+    "end_time": 1862,
+    "est_Trip_time": 88,
+    "seats_available": 1,
+    "date": "18-04-2018",
+    "compleated": false,
+    "cost_per_customer": 48,
+    "registrations": [
+      {
+        "id": "5bf6493c61a82152cbfaeb76",
+        "role": "driver"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8ca4f79789b49cac",
+    "startPoint": "Montreal",
+    "endPoint": "Quebec",
+    "distance": 359,
+    "active": true,
+    "start_time": 145,
+    "end_time": 1915,
+    "est_Trip_time": 1546,
+    "seats_available": 1,
+    "date": "21-06-2018",
+    "compleated": true,
+    "cost_per_customer": 17,
+    "registrations": [
+      {
+        "id": "5bf6493c91528b18c0a27b21",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c166464aceecb74ba",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493cf0050f580d8f9622",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c58a5fcbd4851198e",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493cc1d9f8a0b8e0c159",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c9716d7603e761650",
+    "startPoint": "Ottawa",
+    "endPoint": "Toronto",
+    "distance": 963,
+    "active": false,
+    "start_time": 303,
+    "end_time": 1530,
+    "est_Trip_time": 1850,
+    "seats_available": 1,
+    "date": "11-06-2018",
+    "compleated": false,
+    "cost_per_customer": 45,
+    "registrations": [
+      {
+        "id": "5bf6493ce74e125e5991da5e",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c6ca56c7519bc772e",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493c8bdfc425afdf8594",
+        "role": "passenger"
+      },
+      {
+        "id": "5bf6493ccccce7db829bed73",
+        "role": "passenger"
+      }
+    ]
+  },
+  {
+    "id": "5bf6493c8f9de7b515b291df",
+    "startPoint": "Winnipeg",
+    "endPoint": "New York",
+    "distance": 738,
+    "active": true,
+    "start_time": 164,
+    "end_time": 1001,
+    "est_Trip_time": 1956,
+    "seats_available": 0,
+    "date": "03-03-2018",
+    "compleated": true,
+    "cost_per_customer": 98,
+    "registrations": [
+      {
+        "id": "5bf6493c4f9af416508b5ade",
+        "role": "driver"
+      },
+      {
+        "id": "5bf6493c648fc9fe2d5d08d5",
+        "role": "passenger"
+      }
+    ]
+  }
+]

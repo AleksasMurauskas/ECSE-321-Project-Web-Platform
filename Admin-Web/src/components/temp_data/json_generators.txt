@@ -1,0 +1,51 @@
+On https://www.json-generator.com/#
+
+Generate Users
+[
+  '{{repeat(100)}}',
+  {
+    id: '{{objectId()}}',
+    name: '{{firstName()}} {{surname()}}',
+    username: '{{firstName()}}',
+    password: '{{surname()}}',
+    drivingRate: '{{floating(0,1)}}',
+    passRate: '{{floating(0,1)}}',
+    registrations:[
+      '{{repeat(0,50)}}',
+      {
+        id: '{{objectId()}}',
+        role: '{{random("driver", "passenger")}}'
+      }
+	],
+    pweight: '{{integer(0,10)}}',
+    dweight: '{{integer(0,10)}}'
+
+  }
+]
+
+
+Generate Trips
+[
+  '{{repeat(100)}}',
+  {
+    id: '{{objectId()}}',
+    startPoint: '{{random("Montreal", "Toronto", "Quebec", "New York", "Ottawa", "Winnipeg")}}',
+    endPoint: '{{random("Montreal", "Toronto", "Quebec", "New York", "Ottawa", "Winnipeg")}}',
+    distance: '{{integer(1,1000)}}',
+    active: '{{random("true", "false")}}',
+    start_time: '{{integer(0,1000)}}',
+    end_time: '{{integer(1000, 2000)}}',
+    est_Trip_time: '{{integer(0, 2000)}}',
+    seats_available: '{{integer(0,4)}}',
+    date: '{{date(new Date(2018,1,1), new Date(), "dd-MM-YYYY")}}',
+    compleated:'{{random(true,false)}}',
+    cost_per_customer:'{{integer(0,100)}}',
+    registrations:[
+      '{{repeat(0,5)}}',
+      {
+        id: '{{objectId()}}',
+        role: '{{random("driver", "passenger")}}'
+      }
+	]
+  }
+]
