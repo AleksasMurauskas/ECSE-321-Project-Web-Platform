@@ -1,96 +1,100 @@
 <template>
   <div id="overview">
     <h2>OverView</h2>
-    <h2 align="left">Active Trips</h2>
-    <table align="left" >
-      <tr>
-        <td>
-          <input type="text" v-model="search" placeholder="search trips">
-        </td>
 
-      </tr>
-      <tr>
-        <th class ="anim:id">TripID</th>
-        <th class ="anim:startpoint">StartPoint</th>
-        <th class ="anim:endpoint">EndPoint</th>
-      </tr>
-      <tr>
-
-        <tr v-for="trip in filteredTrips">
-
-      	       <td>{{trip.id}}</td>
-              <td>{{ trip.startpoint }}</td>
-              <td>{{ trip.endpoint }}</td>
-              <td>
-
-          	     <button @click="selectTrip(trip)"> select</button>
-      	       </td>
-        </tr>
-
-      </tr>
-    </table>
-
-
-
-
-
-    <h2 align="left"> Trip Info </h2>
-    <table align="left">
-
-        <tr>
-          <th class ="anim:id">TripID</th>
-          <th class ="anim:id">Driver</th>
-          <th class ="anim:starttime">StartTime</th>
-          <th class ="anim:endtime">EndTime</th>
-          <th class ="anim:endtime">Date</th>
-          <th class ="anim:startpoint">StartPoint</th>
-          <th class ="anim:endpoint">EndPoint</th>
-          <th class ="anim:tripnodes">TripNodes</th>
-          <th class ="anim:tripnodes">Passengers</th>
-          <th class ="anim:tripnodes">Vehicle</th>
-        </tr>
-      <tbody>
-        <tr>
-
-            <td>{{ source.id  }}</td>
-            <td>{{ selectedTripDriver.name }}</td>
-            <!--<td>{{ source.registrations[0].user.name }}</td>-->
-            <td>{{ selectedTrip.start_time }}</td>
-            <td>{{ selectedTrip.end_time }}</td>
-            <td>{{ selectedTrip.date }}</td>
-            <td>{{ selectedTrip.startpoint }}</td>
-              <td>{{ selectedTrip.endpoint }}</td>
-
-
-            <!--<td>{{ selectedTrip.registrations[0].user.name }}</td>-->
-
-
-            <td> <tr v-for="tripnode in selectedTrip.tripNodes ">
-
-              <td> {{tripnode.name}} </td>
-            </tr>
+    <div class="row">
+      <div class="column">
+        <h2 align="left">Active Trips</h2>
+        <table align="left" >
+          <tr>
+            <td>
+              <input type="text" v-model="search" placeholder="search trips">
             </td>
+
+          </tr>
+          <tr>
+            <th class ="anim:id">ID</th>
+            <th class ="anim:startpoint">StartPoint</th>
+            <th class ="anim:endpoint">EndPoint</th>
+          </tr>
+          
+          <!--Active Trips List-->
+          <tr v-for="trip in filteredTrips">
+            
+            <td>{{trip.id}}</td>
+            <td>{{ trip.startpoint }}</td>
+            <td>{{ trip.endpoint }}</td>
+            <td>
+                <button @click="selectTrip(trip)"> select</button>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+
+      <!-- Specific trip -->
+      <div class="column">
+        <h2 align="left"> Trip Info </h2>
+        <table align="left">
+
+            <tr>
+              <th class ="anim:id">TripID</th>
+              <th class ="anim:driver">Driver</th>
+              <th class ="anim:starttime">StartTime</th>
+              <th class ="anim:endtime">EndTime</th>
+              <th class ="anim:endtime">Date</th>
+              <th class ="anim:startpoint">StartPoint</th>
+              <th class ="anim:endpoint">EndPoint</th>
+              <th class ="anim:tripnodes">TripNodes</th>
+              <th class ="anim:tripnodes">Passengers</th>
+              <th class ="anim:tripnodes">Vehicle</th>
+            </tr>
+          <tbody>
+            <tr>
+
+                <td>{{ selectedTrip.id  }}</td>
+                <td>{{ selectedTripDriver }}</td>
+                <td>{{ selectedTrip.start_time }}</td>
+                <td>{{ selectedTrip.end_time }}</td>
+                <td>{{ selectedTrip.date }}</td>
+                <td>{{ selectedTrip.startpoint }}</td>
+                <td>{{ selectedTrip.endpoint }}</td>
+
+
+                <!--<td>{{ selectedTrip.registrations[0].user.name }}</td>-->
+
+
+                          <!--
+
+                <td> <tr v-for="tripnode in selectedTrip.tripNodes ">
+
+                  <td> {{tripnode.name}} </td>
+                </tr>
+                </td>
+
+                <td> <tr v-for="registration in selectedTrip.registrations ">
 
             <td> <tr v-for="registration in selectedTrip.registrations.filter((reg)=> true)">
+                  <td> {{registration.user.name}} </td>
+                </tr>
+                </td>
+                
+                <td><tr>{{ selectedTrip.vehicle.color  }} </tr>
+                  <tr>{{ selectedTrip.vehicle.make  }} </tr>
+                  <tr>{{ selectedTrip.vehicle.model  }} </tr>
+                </td>
+                
+                  -->
 
-              <td> {{registration.user.name}} </td>
             </tr>
-            </td>
-
-              <td>
-              <tr>{{ selectedTrip.vehicle.color  }} </tr>
-              <tr>{{ selectedTrip.vehicle.make  }} </tr>
-              <tr>{{ selectedTrip.vehicle.model  }} </tr>
-              </td>
-
-        </tr>
 
 
 
-      </tbody>
-    </table>
+          </tbody>
+        </table>
 
-
+      </div>
+    </div>
 
 
     <h2 align="left"> Active Drivers</h2>
@@ -274,17 +278,18 @@
 
 </template>
 <style>
-  #overview {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    color: #2c3e50;
-    background: #f2ece8;
+  .column {
+    float: left;
+    padding-left: 50px;
+    width: 40%;
   }
-  .list{
-  list-style-type:none;
-  padding:0;
-  margin:0;
-  height: 300px;
-  overflow:auto;
+
+  /* Clear floats after the columns */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
   }
+
 </style>
 <span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>
