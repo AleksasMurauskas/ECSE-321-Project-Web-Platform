@@ -23,7 +23,10 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 8087,
+    host:  'localhost',
+    backendHost: 'webservice-backend-12.herokuapp.com/api',
+    backendPort: 80,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
