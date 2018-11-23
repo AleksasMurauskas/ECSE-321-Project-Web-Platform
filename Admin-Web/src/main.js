@@ -6,10 +6,7 @@ import App from './App'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
-import VueVirtualScroller from "vue-virtual-scroller";
 
-Vue.use(VueVirtualScroller);
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
