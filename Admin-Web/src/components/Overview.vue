@@ -71,7 +71,7 @@
             </tr>
             </td>
 
-            <td> <tr v-for="registration in selectedTrip.registrations ">
+            <td> <tr v-for="registration in selectedTrip.registrations.filter((reg)=> true)">
 
               <td> {{registration.user.name}} </td>
             </tr>
