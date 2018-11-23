@@ -15,18 +15,18 @@
         <th class ="anim:endpoint">EndPoint</th>
       </tr>
       <tr>
-    <!--  <ul class="list" >  -->
+
         <tr v-for="trip in filteredTrips">
-          <!--<tr>-->
+
       	       <td>{{trip.id}}</td>
               <td>{{ trip.startpoint }}</td>
               <td>{{ trip.endpoint }}</td>
               <td>
+
           	     <button @click="selectTrip(trip)"> select</button>
       	       </td>
-  	       <!--</tr>-->
         </tr>
-      <!--</ul>-->
+
       </tr>
     </table>
 
@@ -66,7 +66,7 @@
 
             <td> <tr v-for="registration in selectedTrip.registrations ">
 
-              <td> {{registration}} </td>
+              <td> {{JSOG.decode(registration).user.name}} </td>
             </tr>
             </td>
 

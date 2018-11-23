@@ -79,7 +79,7 @@ export default {
     AXIOS.get(`/trips`)
     .then(response => {
       // JSON responses are automatically parsed.
-      this.trips = JSOG.decode(response.data)
+      this.trips =   response.data
 
       console.log(this.trips)
     })
@@ -143,6 +143,15 @@ export default {
       // Reset the name field for new participants
       //this.newParticipant = ''
       this.selectedDriver = user
+    },
+    getUserName: function (registration) {
+      // Create a new participant and add it to the list of participants
+      //var p = new ParticipantDto(participantName)
+      //this.p.push(p)
+      // Reset the name field for new participants
+      //this.newParticipant = ''
+      reg= JSOG.decode(registration)
+      return reg.user.name;
     },
     getDriver: function(trip){
       r= trip.registrations
