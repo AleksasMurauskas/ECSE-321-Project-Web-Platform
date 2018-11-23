@@ -393,6 +393,14 @@ export default {
       //this.newParticipant = ''
       this.selectedDriver = user
     },
+    selectPassenger: function (user) {
+      // Create a new participant and add it to the list of participants
+      //var p = new ParticipantDto(participantName)
+      //this.p.push(p)
+      // Reset the name field for new participants
+      //this.newParticipant = ''
+      this.selectedPassenger = user
+    },
     getUserName: function (registration) {
       // Create a new participant and add it to the list of participants
       //var p = new ParticipantDto(participantName)
