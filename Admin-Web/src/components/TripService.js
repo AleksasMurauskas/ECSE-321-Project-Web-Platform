@@ -36,6 +36,10 @@ function TripDto (iD, driver, start, end, startPoint, endPoint,date,vehicle) {
   this.tripNodes=[]
 }
 
+function T (id) {
+  this.id = id
+}
+
 function UserDto (name, username, password, drivingrate,passrate) {
   this.id=0
   this.name =name
@@ -54,12 +58,196 @@ export default {
       trips: [],
       newParticipant: '',
       errorTrip: '',
-      selectedTrip : new TripDto("000", "000", "0000", "0000","000000","000000","0000","bmw"),
+      selectedTrip : JSOG.decode([
+    {
+        "@id": "1",
+        "id": 5,
+        "startpoint": "Montreal",
+        "endpoint": "Toronto",
+        "distance": 1000,
+        "active": true,
+        "start_time": "01:40:02",
+        "end_time": "15:00:00",
+        "est_Trip_time": 100,
+        "seats_available": 2,
+        "date": "2018-01-22",
+        "compleated": false,
+        "vehicle": {
+            "@id": "2",
+            "id": 4,
+            "model": "Cooper",
+            "make": "Mini",
+            "color": "Blue",
+            "trips": [
+                {
+                    "@ref": "1"
+                },
+                {
+                    "@id": "3",
+                    "id": 11,
+                    "startpoint": "Montreal",
+                    "endpoint": "Toronto",
+                    "distance": 1000,
+                    "active": true,
+                    "start_time": "01:40:02",
+                    "end_time": "15:00:00",
+                    "est_Trip_time": 100,
+                    "seats_available": 2,
+                    "date": "2018-01-22",
+                    "compleated": false,
+                    "vehicle": {
+                        "@ref": "2"
+                    },
+                    "cost_per_customer": 100,
+                    "registrations": [
+                        {
+                            "@id": "4",
+                            "id": 12,
+                            "role": "DRIVER",
+                            "user": {
+                                "@id": "5",
+                                "id": 1,
+                                "name": "Bob",
+                                "username": "admin",
+                                "password": "$2a$10$/NyGBTxBVAUI9MQm.K6VVe7lHa16meyUeFW8DcZi8MkylvzndHtoW",
+                                "drivingRate": 5,
+                                "passRate": 5,
+                                "registrations": [
+                                    {
+                                        "@id": "6",
+                                        "id": 6,
+                                        "role": "DRIVER",
+                                        "user": {
+                                            "@ref": "5"
+                                        },
+                                        "trip": {
+                                            "@ref": "1"
+                                        }
+                                    },
+                                    {
+                                        "@ref": "4"
+                                    }
+                                ],
+                                "vehicles": [
+                                    {
+                                        "@ref": "2"
+                                    }
+                                ],
+                                "roles": [
+                                    {
+                                        "id": 3,
+                                        "name": "ADMIN"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "USER"
+                                    }
+                                ],
+                                "dweight": 5,
+                                "pweight": 5
+                            },
+                            "trip": {
+                                "@ref": "3"
+                            }
+                        }
+                    ],
+                    "tripNodes": [
+                        {
+                            "@id": "7",
+                            "id": 13,
+                            "position": {
+                                "@id": "8",
+                                "id": 14,
+                                "tripNodes": [
+                                    {
+                                        "@ref": "7"
+                                    }
+                                ],
+                                "position": "ontario"
+                            },
+                            "pointType": "START",
+                            "name": "Montreal",
+                            "time": "01:40:02"
+                        },
+                        {
+                            "@id": "9",
+                            "id": 15,
+                            "position": {
+                                "@id": "10",
+                                "id": 16,
+                                "tripNodes": [
+                                    {
+                                        "@ref": "9"
+                                    }
+                                ],
+                                "position": "ontario"
+                            },
+                            "pointType": "END",
+                            "name": "Toronto",
+                            "time": "15:00:00"
+                        }
+                    ]
+                }
+            ],
+            "user": {
+                "@ref": "5"
+            }
+        },
+        "cost_per_customer": 100,
+        "registrations": [
+            {
+                "@ref": "6"
+            }
+        ],
+        "tripNodes": [
+            {
+                "@id": "11",
+                "id": 9,
+                "position": {
+                    "@id": "12",
+                    "id": 10,
+                    "tripNodes": [
+                        {
+                            "@ref": "11"
+                        }
+                    ],
+                    "position": "ontario"
+                },
+                "pointType": "START",
+                "name": "Montreal",
+                "time": "01:40:02"
+            },
+            {
+                "@id": "13",
+                "id": 7,
+                "position": {
+                    "@id": "14",
+                    "id": 8,
+                    "tripNodes": [
+                        {
+                            "@ref": "13"
+                        }
+                    ],
+                    "position": "ontario"
+                },
+                "pointType": "END",
+                "name": "Toronto",
+                "time": "15:00:00"
+            }
+        ]
+    },
+    {
+        "@ref": "3"
+    }
+
+]
+)[0],
       selectedDriver: new UserDto("name", "username", "password", "drivingrate","passrate"),
       response: [],
       users:[],
       drivers:[],
       passengers:[],
+      reg:''
 
     }
   },
@@ -79,8 +267,11 @@ export default {
     AXIOS.get(`/trips`)
     .then(response => {
       // JSON responses are automatically parsed.
-      this.trips =   response.data
 
+      //console.log("JSOG Output: " + JSOG.decode(response.data))
+      console.log('JSOG.decode(data): %O\t\t', JSOG.decode(response.data));
+
+      this.trips= JSOG.decode(response.data)
       console.log(this.trips)
     })
    .catch(e => {
@@ -117,6 +308,7 @@ export default {
   },
 
 
+
   methods: {
     /*
     createParticipant: function (participantName) {
@@ -134,7 +326,16 @@ export default {
       //this.p.push(p)
       // Reset the name field for new participants
       //this.newParticipant = ''
-      this.selectedTrip = trip
+
+      console.log('Selected Trip: %O\t\t', trip);
+      console.log(trip.id);
+      console.log(typeof trip);
+      this.selectedTrip= trip
+      //new T(trip.id)
+      console.log('Selected Tripv2: %O\t\t', this.selectedTrip);
+      //(iD, driver, start, end, startPoint, endPoint,date,vehicle)
+      //this.selectedTrip=trip
+      //this.selectedTrip = JSOG.decode(trip)
     },
     selectDriver: function (user) {
       // Create a new participant and add it to the list of participants
@@ -150,8 +351,8 @@ export default {
       //this.p.push(p)
       // Reset the name field for new participants
       //this.newParticipant = ''
-      reg= JSOG.decode(registration)
-      return reg.user.name;
+      //this.reg= JSOG.decode(registration)
+      return registration.user.name;
     },
     getDriver: function(trip){
       r= trip.registrations
@@ -170,11 +371,12 @@ export default {
         // registrations to see if they have ever been a driver
         return user.name.match(this.searchDriver);
       })
+    },
+    source: function() {
+      return this.selectedTrip || '';
     }
 
 
   }
-
-
 
 }

@@ -51,14 +51,20 @@
         </tr>
       <tbody>
         <tr>
-            <td>{{ selectedTrip.id  }}</td>
-            <td>{{ selectedTrip.id }}</td>
-            <td> {{ selectedTrip.start_time  }}  </td>
-            <td>  {{ selectedTrip.end_time  }} </td>
-              <td>  {{ selectedTrip.date  }} </td>
-            <td> {{ selectedTrip.startpoint  }} </td>
-            <td> {{ selectedTrip.endpoint  }} </td>
-            <td> <tr v-for="tripnode in selectedTrip.tripnodes ">
+
+            <td>{{ source.id  }}</td>
+            <td>{{ source.registrations[0].user.name }}</td>
+            <td>{{ selectedTrip.start_time }}</td>
+            <td>{{ selectedTrip.end_time }}</td>
+            <td>{{ selectedTrip.date }}</td>
+            <td>{{ selectedTrip.startpoint }}</td>
+              <td>{{ selectedTrip.endpoint }}</td>
+
+
+            <!--<td>{{ selectedTrip.registrations[0].user.name }}</td>-->
+
+
+            <td> <tr v-for="tripnode in selectedTrip.tripNodes ">
 
               <td> {{tripnode.name}} </td>
             </tr>
@@ -66,13 +72,18 @@
 
             <td> <tr v-for="registration in selectedTrip.registrations ">
 
-              <td> {{JSOG.decode(registration).user.name}} </td>
+              <td> {{registration.user.name}} </td>
             </tr>
             </td>
 
-              <td> {{ selectedTrip.vehicle  }} </td>
+              <td>
+              <tr>{{ selectedTrip.vehicle.color  }} </tr>
+              <tr>{{ selectedTrip.vehicle.make  }} </tr>
+              <tr>{{ selectedTrip.vehicle.model  }} </tr>
+              </td>
 
         </tr>
+
 
 
       </tbody>
