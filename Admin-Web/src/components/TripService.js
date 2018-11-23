@@ -243,11 +243,15 @@ export default {
 ]
 )[0],
       selectedDriver: new UserDto("name", "username", "password", "drivingrate","passrate"),
+      selectedPassenger: new UserDto("name", "username", "password", "drivingrate","passrate"),
+      searchPassenger:'',
       response: [],
       users:[],
       drivers:[],
       passengers:[],
-      reg:''
+      reg:'',
+      r:[],
+      selectedTripDriver: ''
 
     }
   },
@@ -283,20 +287,47 @@ export default {
    AXIOS.get(`/users`)
    .then(response => {
      // JSON responses are automatically parsed.
-     this.users = response.data
+     this.users = JSOG.decode(response.data)
      console.log(this.users)
+    console.log(this.users[0] );
+    function isRole(user,role) {
+      return  user.registrations.map(
+        (registration) => {
+          return registration.role.match(role);
+        }
+      ).reduce((acc,val) => acc || val, false);
+    }
+    this.drivers = this.users.filter((user)=> isRole(user,"DRIVER"))
 
-     this.drivers= this.users.filter((user)=>
-      {return user.registersations.map(
-       (registration)=> {return registration.role})
-       .match("DRIVER")}
-       )
+    // Returns users that are drivers
+    // this.drivers = this.users.filter(
+    //
+    //   // Returns array of booleans s.t
+    //   (user) => user.registrations.map(
+    //     (registration) => {
+    //       return registration.role.match("DRIVER");
+    //     }
+    //   ).reduce((acc,val) => acc || val, false)
+    // )
 
-       this.passengers= this.users.filter((user)=>
-        {return user.registersations.map(
-         (registration)=> {return registration.role})
-         .match("PASSENGER")}
-         )
+    console.log('JSOG.decode(datadriver): %O\t\t', this.drivers);
+
+
+//console.log('JSOG.decode(datadriver): %O\t\t', this.drivers);
+     // this.drivers= this.users.filter((user)=>
+     //  { user.registersations.map(
+     //   (registration)=> {return registration.role.match("DRIVER");})
+     //   .reduce((accumulator,currentValue)=> {return accumulator||currentValue;});
+     //
+     // }
+     // )
+     //
+     //   console.log('JSOG.decode(datadriver): %O\t\t', this.drivers);
+     // this.passengers= this.users.filter((user)=>user.registrations.map((registration)=>{return registration.role.match("PASSENGER");}).reduce((acc,val)=>acc||val,false)
+     //   )
+     this.passengers= this.users.filter((user)=>isRole(user,"PASSENGER"))
+
+
    })
   .catch(e => {
     this.errorTrip = e;
@@ -319,6 +350,13 @@ export default {
       this.newParticipant = ''
     },
     */
+    getDriver: function(trip){
+      this.r= trip.registrations
+      this.selectedTripDriver=this.r.filter((registration)=> registration.role.match("DRIVER"))[0];
+
+      return this.r.filter((registration)=> { return registration.role.match("DRIVER");})[0];
+
+    },
 
     selectTrip: function (trip) {
       // Create a new participant and add it to the list of participants
@@ -331,6 +369,16 @@ export default {
       console.log(trip.id);
       console.log(typeof trip);
       this.selectedTrip= trip
+      let   getDriver = function(trip){
+          var r= trip.registrations
+        //  this.selectedTripDriver= r.filter((registration)=> registration.role.match("DRIVER"))[0];
+      //  return r.filter((registration)=>{return registration.role.match("DRIVER");})[0]
+        //  return r.filter((registration)=> registration.role.match("DRIVER"))[0];
+       return (r.filter((registration)=>{return registration.role.match("DRIVER");}))[0].user
+      //return r.filter((registration)=>{return true;})[0].user
+        //return r[0].user
+        }
+      this.selectedTripDriver=getDriver(this.selectedTrip)
       //new T(trip.id)
       console.log('Selected Tripv2: %O\t\t', this.selectedTrip);
       //(iD, driver, start, end, startPoint, endPoint,date,vehicle)
@@ -353,11 +401,8 @@ export default {
       //this.newParticipant = ''
       //this.reg= JSOG.decode(registration)
       return registration.user.name;
-    },
-    getDriver: function(trip){
-      r= trip.registrations
-      r.map(registration => {if (registration.role=="DRIVER") {return registration.user;} else {}})
     }
+
   },
 
   computed: {
@@ -370,6 +415,12 @@ export default {
       return this.drivers.filter((user) => { // is going to have to search through each persons
         // registrations to see if they have ever been a driver
         return user.name.match(this.searchDriver);
+      })
+    },
+    filteredPassengers: function() {
+      return this.passengers.filter((user) => { // is going to have to search through each persons
+        // registrations to see if they have ever been a driver
+        return user.name.match(this.searchPassenger);
       })
     },
     source: function() {
