@@ -40,7 +40,9 @@ export default {
       passengers:[],
       reg:'',
       registrations:[],
-      selectedTripDriver: ''
+      selectedTripDriver: Object,
+      selectedTripVehicle: Object,
+      selectedTripPassengers: []
 
     }
   },
@@ -49,7 +51,7 @@ export default {
    * ON WEBPAGE LOAD
    */
   created: function () {
-
+      
     /**
      * --------------------
      * Get all trips
@@ -57,7 +59,6 @@ export default {
      */
     AXIOS.get(`/trips`)
     .then(response => {
-      //console.log("JSOG Output: " + JSOG.decode(response.data))
       console.log('JSOG.decode(data): %O\t\t', JSOG.decode(response.data));
 
       this.trips = JSOG.decode(response.data)
@@ -68,71 +69,80 @@ export default {
    });
 
 
-   /**
+    /**
      * --------------------
      * Get all users
      * --------------------
      */
-   AXIOS.get(`/users`)
-   .then(response => {
-     // JSON responses are automatically parsed.
-     this.users = JSOG.decode(response.data)
-     console.log(this.users)
-     console.log(this.users[0] );
-     
-     function isRole(user,role) {
-         return  user.registrations.map(
-             (registration) => {
-                 return registration.role.match(role);
-                }
-            ).reduce((acc,val) => acc || val, false);
-        }
+    AXIOS.get(`/users`)
+    .then(response => {
+        // JSON responses are automatically parsed.
+        this.users = JSOG.decode(response.data)
+        console.log(this.users)
+        console.log(this.users[0] );
 
-     /**
-     * --------------------
-     * Get all drivers
-     * --------------------
-     */
-    this.drivers = this.users.filter((user) => isRole(user,"DRIVER"))
+    /**
+    * --------------------
+    * Get all drivers
+    * --------------------
+    */
+    this.drivers = this.users.filter((user) => this.isRole(user,"DRIVER"))
 
-     /**
+    /**
      * --------------------
      * Get all passengers
      * --------------------
      */
-    this.passengers= this.users.filter((user) => isRole(user,"PASSENGER"))
+    this.passengers= this.users.filter((user) => this.isRole(user,"PASSENGER"))
 
     console.log('JSOG.decode(datadriver): %O\t\t', this.drivers);
 
 
-   })
-  .catch(e => {
-    this.errorTrip = e;
-  });
-
-
-
+    })
+    .catch(e => {
+        this.errorTrip = e;
+    });
 
   },
-
-
 
   methods: {
 
     /**
-     * Get the driver for a given trip
-     * @param trip 
+     * 
+     * @param user 
+     * @param role 
      */
-    getDriver: function(trip) {
-        var registrations = trip.registrations
-        
-        var registration = registrations.filter(
+    isRole: function(user, role) {
+        return  user.registrations.map(
             (registration) => {
-                return registration.role.match("DRIVER")
-                }
-        )[0]
+                return registration.role.match(role);
+               }
+        ).reduce((acc,val) => acc || val, false);
+    },
 
-        return registration.user
+    /**
+     * Get a set of registrations by role
+     * @param trip 
+     * @param role 
+     */
+    getRegistrationByRole: function(trip, role) {  
+        var registrations = trip.registrations.filter(
+            (registration) => {
+                return registration.role.match(role)
+                }
+        )
+        return registrations
+    },
+    
+    /**
+     * Get users with role for a given trip
+     * @param trip 
+     * @param role 
+     */
+    getUsersWithRole: function(trip, role) {
+        var users = []
+        var registrations = this.getRegistrationByRole(trip, role)
+        return registrations.map((registration) => registration.user)
     },
 
     /**
@@ -147,10 +157,12 @@ export default {
       console.log('Selected Registration: %O\t\t', trip.registrations)
       
       this.selectedTrip = trip
-      this.selectedTripDriver = this.getDriver(this.selectedTrip).name
+      this.selectedTripVehicle = trip.vehicle
+      this.selectedTripDriver = this.getUsersWithRole(this.selectedTrip, "DRIVER")[0]
+      this.selectedTripPassengers = this.getUsersWithRole(this.selectedTrip, "PASSENGER");
 
-
-      console.log('Filtered: %O\t\t', this.getDriver(trip))
+      console.log('Filtered: %O\t\t', this.getUsersWithRole(this.selectedTrip, "DRIVER")[0])
+      console.log('Vehicle: %O\t\t', trip.vehicle);
       
     },
     selectDriver: function (user) {
@@ -198,9 +210,6 @@ export default {
         // registrations to see if they have ever been a driver
         return user.name.match(this.searchPassenger);
       })
-    },
-    source: function() {
-      return this.selectedTrip || '';
     }
 
 

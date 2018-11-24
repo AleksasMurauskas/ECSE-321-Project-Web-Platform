@@ -45,47 +45,47 @@
               <th class ="anim:endtime">Date</th>
               <th class ="anim:startpoint">StartPoint</th>
               <th class ="anim:endpoint">EndPoint</th>
+              <th class ="anim:distance">Distance</th>
               <th class ="anim:tripnodes">TripNodes</th>
-              <th class ="anim:tripnodes">Passengers</th>
-              <th class ="anim:tripnodes">Vehicle</th>
+              <th class ="anim:passengers">Passengers</th>
+              <th class ="anim:vehicle">Vehicle</th>
+              <th class ="anim:costpercustomer">Cost Per Customer</th>
             </tr>
           <tbody>
             <tr>
 
                 <td>{{ selectedTrip.id  }}</td>
-                <td>{{ selectedTripDriver }}</td>
+                <td>{{ selectedTripDriver.name }}</td>
                 <td>{{ selectedTrip.start_time }}</td>
                 <td>{{ selectedTrip.end_time }}</td>
                 <td>{{ selectedTrip.date }}</td>
                 <td>{{ selectedTrip.startpoint }}</td>
                 <td>{{ selectedTrip.endpoint }}</td>
-
-
-                <!--<td>{{ selectedTrip.registrations[0].user.name }}</td>-->
-
-
-                          <!--
-
-                <td> <tr v-for="tripnode in selectedTrip.tripNodes ">
-
-                  <td> {{tripnode.name}} </td>
-                </tr>
+                <td>{{ selectedTrip.distance }}</td>
+                <td> 
+                  <table border="1">
+                    <tr v-for="node in selectedTrip.tripNodes">
+                      <td> {{node.name}} </td>
+                    </tr>
+                  </table>
                 </td>
-
-                <td> <tr v-for="registration in selectedTrip.registrations ">
-
-            <td> <tr v-for="registration in selectedTrip.registrations.filter((reg)=> true)">
-                  <td> {{registration.user.name}} </td>
-                </tr>
+                <td>
+                  <table border="1">
+                    <tr v-for="passenger in selectedTripPassengers">
+                      <td> {{passenger.name}} </td>
+                    </tr>
+                  </table>
                 </td>
-                
-                <td><tr>{{ selectedTrip.vehicle.color  }} </tr>
-                  <tr>{{ selectedTrip.vehicle.make  }} </tr>
-                  <tr>{{ selectedTrip.vehicle.model  }} </tr>
+                <td>
+                  <table border="1">
+                    <td>{{ selectedTripVehicle.color }}</td>
+                    <td>{{ selectedTripVehicle.make }}</td>
+                    <td>{{ selectedTripVehicle.model }}</td>
+                  </table>
                 </td>
-                
-                  -->
+                <td>{{ selectedTrip.cost_per_customer }}</td>
 
+             
             </tr>
 
 
@@ -241,14 +241,6 @@
 
 
 
-
-
-
-
-
-
-
-
         </tr>
 
 
@@ -271,17 +263,12 @@
 </script>
 
 
-
-
-
-
-
 </template>
 <style>
   .column {
     float: left;
     padding-left: 50px;
-    width: 40%;
+    width: 30%;
   }
 
   /* Clear floats after the columns */
