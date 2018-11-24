@@ -51,7 +51,6 @@ export default {
    * ON WEBPAGE LOAD
    */
   created: function () {
-      
     /**
      * --------------------
      * Get all trips
@@ -108,9 +107,9 @@ export default {
   methods: {
 
     /**
-     * 
-     * @param user 
-     * @param role 
+     *
+     * @param user
+     * @param role
      */
     isRole: function(user, role) {
         return  user.registrations.map(
@@ -122,10 +121,10 @@ export default {
 
     /**
      * Get a set of registrations by role
-     * @param trip 
-     * @param role 
+     * @param trip
+     * @param role
      */
-    getRegistrationByRole: function(trip, role) {  
+    getRegistrationByRole: function(trip, role) {
         var registrations = trip.registrations.filter(
             (registration) => {
                 return registration.role.match(role)
@@ -133,11 +132,11 @@ export default {
         )
         return registrations
     },
-    
+
     /**
      * Get users with role for a given trip
-     * @param trip 
-     * @param role 
+     * @param trip
+     * @param role
      */
     getUsersWithRole: function(trip, role) {
         var users = []
@@ -147,7 +146,7 @@ export default {
 
     /**
      * On selection of a given trip
-     * @param trip 
+     * @param trip
      */
     selectTrip: function (trip) {
 
@@ -155,7 +154,7 @@ export default {
       console.log(trip.id);
       console.log(typeof trip);
       console.log('Selected Registration: %O\t\t', trip.registrations)
-      
+
       this.selectedTrip = trip
       this.selectedTripVehicle = trip.vehicle
       this.selectedTripDriver = this.getUsersWithRole(this.selectedTrip, "DRIVER")[0]
@@ -163,7 +162,7 @@ export default {
 
       console.log('Filtered: %O\t\t', this.getUsersWithRole(this.selectedTrip, "DRIVER")[0])
       console.log('Vehicle: %O\t\t', trip.vehicle);
-      
+
     },
     selectDriver: function (user) {
       // Create a new participant and add it to the list of participants

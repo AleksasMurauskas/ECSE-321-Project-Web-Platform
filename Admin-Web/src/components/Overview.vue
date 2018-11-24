@@ -4,8 +4,8 @@
 
     <!-- ACTIVE TRIPS -->
     <div class="row">
-      
-      <!-- List of Trips --> 
+
+      <!-- List of Trips -->
       <div class="column">
         <h2 align="left">Active Trips</h2>
         <table align="left" >
@@ -20,10 +20,10 @@
             <th class ="anim:startpoint">StartPoint</th>
             <th class ="anim:endpoint">EndPoint</th>
           </tr>
-          
+
           <!--Active Trips List-->
           <tr v-for="trip in filteredTrips">
-            
+
             <td>{{trip.id}}</td>
             <td>{{ trip.startpoint }}</td>
             <td>{{ trip.endpoint }}</td>
@@ -65,7 +65,7 @@
                 <td>{{ selectedTrip.startpoint }}</td>
                 <td>{{ selectedTrip.endpoint }}</td>
                 <td>{{ selectedTrip.distance }}</td>
-                <td> 
+                <td>
                   <table border="1">
                     <tr v-for="node in selectedTrip.tripNodes">
                       <td> {{node.name}} </td>
@@ -88,7 +88,7 @@
                 </td>
                 <td>{{ selectedTrip.cost_per_customer }}</td>
 
-             
+
             </tr>
 
 
@@ -101,7 +101,7 @@
 
     <!-- ACTIVE DRIVERS -->
     <div class="row">
-      
+
       <!-- List of Drivers -->
       <div class="column">
         <h2 align="left"> Active Drivers</h2>
@@ -191,7 +191,7 @@
 
     <!-- ACTIVE PASSENGERS -->
     <div class="row">
-      
+
       <!-- List of passengers -->
       <div class="column">
         <h2 align="left"> Active Passengers</h2>
@@ -269,6 +269,7 @@
 </script>
 
 
+
 </template>
 <style>
   .column {
@@ -285,7 +286,7 @@
       overflow: visible;
   }
 
-  
+
 
 </style>
 <span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link to="">Go to Fleet Status</router-link>
+    <router-link to="/overview">Go to Fleet Overview</router-link>
     <router-link to="/Ranking">Go to Ranking</router-link>
     <router-view></router-view>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
 }
 </script>
 
