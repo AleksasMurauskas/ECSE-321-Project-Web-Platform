@@ -24,7 +24,7 @@
         </td>
         <td>
           <ul class = "list">
-            <li v-for="(route, index) in bestRoutes" v-on:click="userClicked(user)">
+            <li v-for="(route, index) in bestRoutes">
               #{{index+ 1}} {{route.value}} - Trip count: {{route.count}}
             </li>
           </ul>
@@ -55,13 +55,10 @@
 import temp from "./temp_data/ranking_fake_data.json";
 import axios from 'axios'
 
-var trips;
+//var trips = new Array();
 var users;
 
 var error = "Test";
-var bestPassengers;
-var bestDrivers;
-var bestRoutes;
 
 
 
@@ -77,130 +74,119 @@ var AXIOS = axios.create({
 
 export default {
   data(){
+
     return {
-      bestPassengers,
-      bestDrivers,
-      bestRoutes,
+      bestPassengers:[],
+      bestDrivers:[],
+      bestRoutes:[],
       error,
       startInput: "",
       endInput: ""
     }
   },
   created: function () {
-    AXIOS.get('/trips').then(response =>{
-      this.trips = JSOG.decode(response.data)
-    }).catch(e =>{
-      this.error = e
-    });
-
-    //generateUserLists();
-    //generateTripList();
+    this.generateLists("NaN", "NaN");
   },
   methods: {
     userClicked: function(selectedItem){
-      alert(selectedItem.name)
+      alert(selectedItem.name + " ID:" + selectedItem.id);
+
     },
     userClickedID: function(selectedItem){
       alert(selectedItem.id)
     },
     filterClicked: function(startInput, endInput){
-      filterLists(startInput, endInput)
-    }
-  }
-}
+      this.generateLists(startInput, endInput);
+    },
+    generateLists: function(startDate, endDate){
+      AXIOS.get('/trips').then(response =>{
+        console.log('JSOG.decode(data): %O\t\t', JSOG.decode(response.data));
+        this.generateTripList(startDate,endDate, JSOG.decode(response.data));
+      }).catch(e =>{
+        alert(e);
+        this.error = e
+      });
 
-function filterLists(startInput, endInput){
+      AXIOS.get('/users').then(response =>{
+        console.log('JSOG.decode(data): %O\t\t', JSOG.decode(response.data));
+        this.generateUserLists(startDate,endDate, JSOG.decode(response.data));
+      }).catch(e=>{
+        alert(e);
+        this.error = e
+      })
+    },
+    generateTripList: function(start, end, trips){
+      var routeTypes = new Array();
+      var startDate = new Date(start);
+      var endDate = new Date(end);
 
-  alert(startInput);
-  var start = document.getElementById("start").value;
-  var end = document.getElementById("end").value;
-  var newTripList = [];
-  for(var i =0; i < trips.length;i++){
-    var trip = trips[i];
-    if(trip.compleated){
-      if(trip.date <= startInput && trip.date <= endInput){
-        newTripList.push(trip);
-      }
-    }
-  }
+      for(var i = 0; i < trips.length; i++){
 
-  for(var a =0; a< temp.length; a++){
-    var activeUser = temp[a];
-    for(var b=0; b< activeUser.registrations.length; b++){
-      var reg1 = activeUser.registrations[b];
-      for(var c = 0; c< newTripList.length; c++){
-        var activeTrip = newTripList[c];
-        for(var d =0; d< activeTrip.registrations.length; d++){
-          var reg2= activeTrip.registrations[d];
-          if(reg1.id == reg2.id){
-            if(reg1.role == "driver"){
-              activeUser.dCount++;
+        var trip = trips[i];
+        var date = new Date(trip.date);
+        if((date > startDate && date < endDate) || (startDate == "Invalid Date" && endDate == "Invalid Date" ) ){
+          var route = trip.startpoint + " to " + trip.endpoint ;
+          var changed = false;
+          for(var j = 0; j <routeTypes.length; j++){
+            if(route == routeTypes[j].value){
+              routeTypes[j].count++;
+              changed = true;
             }
-            if(reg1.role == "passenger"){
-              activeUser.pCount++;
-            }
+          }
+          if(changed == false){
+            routeTypes.push(new routeType(route, 1))
           }
         }
       }
+
+      for (var i = 0; i < routeTypes.length; i++) {
+        var value = routeTypes[i]
+        for (var j = i - 1; j > -1 && routeTypes[j].count < value.count; j--) {
+          routeTypes[j + 1] = routeTypes[j]
+        }
+        routeTypes[j + 1] = value;
+      }
+
+      this.bestRoutes = routeTypes;
+    },
+    generateUserLists: function(start, end, users){
+      var startDate = new Date(start);
+      var endDate = new Date(end);
+      for(var i = 0; i < users.length; i++){
+        var user = users[i];
+        var regs = user.registrations;
+        var driverCount = 0;
+        var passengerCount = 0;
+        for(var j = 0; j < regs.length; j++){
+          var reg = regs[j];
+          var date = new Date(reg.trip.date);
+          if(reg.role == "driver"){
+            if((date > startDate && date < endDate) || (startDate == "Invalid Date" && endDate == "Invalid Date")){
+              driverCount++;
+            }
+          } else {
+            if((date > startDate && date < endDate) || (startDate == "Invalid Date" && endDate == "Invalid Date" )){
+              passengerCount++;
+            }
+          }
+        }
+        user.pCount = passengerCount;
+        user.dCount = driverCount;
+      }
+      this.bestPassengers = sortToPCount(users);
+      this.bestDrivers = sortToDCount(users);
     }
   }
-  SortRouteList(newTripList);
-  bestPassengers = sortToPCount(temp);
-  bestDrivers = sortToDCount(temp);
+
 }
 
-function  generateUserLists(startDate, endDate){
-  var users = temp;
-  for(var i = 0; i < users.length; i++){
-    var user = users[i];
-    var regs = user.registrations;
-    var driverCount = 0;
-    var passengerCount = 0;
-    for(var j = 0; j < regs.length; j++){
-      var reg = regs[j];
-      if(reg.role == "driver"){
-        driverCount++;
-      } else {
-        passengerCount++;
-      }
-    }
-    user.pCount = passengerCount;
-    user.dCount = driverCount;
-  }
-  bestPassengers = sortToPCount(users);
-  bestDrivers = sortToDCount(users);
-}
 
-function generateTripList(startDate, endDate){
-  var routeTypes = new Array();
-  for(var i = 0; i < trips.length; i++){
-    var trip = trips[i];
-    var date = new Date(trip.date)
-    var route = trip.startPoint + " to " + trip.endPoint ;
-    var changed = false;
-    for(var j = 0; j <routeTypes.length; j++){
-      if(route == routeTypes[j].value){
-        routeTypes[j].count++;
-        changed = true;
-      }
-    }
-    if(changed == false){
-      routeTypes.push(new routeType(route, 1))
-    }
-  }
-  for (var i = 0; i < routeTypes.length; i++) {
-    var value = routeTypes[i]
-    for (var j = i - 1; j > -1 && routeTypes[j].count < value.count; j--) {
-      routeTypes[j + 1] = routeTypes[j]
-    }
-    routeTypes[j + 1] = value;
-  }
-  bestRoutes = routeTypes;
-}
+
 function routeType(value, count) {
   this.value = value;
   this.count = count;
 }
+
 function sortToPCount(list){
   var items = list.slice();
   for (var i = 0; i < items.length; i++) {
@@ -222,33 +208,6 @@ function sortToDCount(list){
     items[j + 1] = value
   }
   return items;
-}
-
-function SortRouteList(tripList){
-  var routeTypes = new Array();
-  for(var i = 0; i < tripList.length; i++){
-    var trip = tripList[i];
-    var date = new Date(trip.date)
-    var route = trip.startPoint + " to " + trip.endPoint ;
-    var changed = false;
-    for(var j = 0; j <routeTypes.length; j++){
-      if(route == routeTypes[j].value){
-        routeTypes[j].count++;
-        changed = true;
-      }
-    }
-    if(changed == false){
-      routeTypes.push(new routeType(route, 1))
-    }
-  }
-  for (var i = 0; i < routeTypes.length; i++) {
-    var value = routeTypes[i]
-    for (var j = i - 1; j > -1 && routeTypes[j].count < value.count; j--) {
-      routeTypes[j + 1] = routeTypes[j]
-    }
-    routeTypes[j + 1] = value;
-  }
-  bestRoutes = routeTypes;
 }
 </script>
 
