@@ -1,7 +1,7 @@
 <template>
   <div id= "Active Trips">
     <h2> Trip Info </h2>
-    <table>
+    <table id = 'my-table'>
         <tr>
           <th>Trip Times</th>
           <th>Trip Locations</th>
@@ -40,17 +40,37 @@
 </template>
 
 <script>
+
 </script>
+
+<input id='inputFilter'>
+<button id='filter'>filter</button>
 
 <style>
 
   h2 {
   font-weight: normal;
+  font-size: 48px;
+
+  }
+
+  th{
+  font-weight: normal;
+  font-size; 24px;
+  display: -webkit-flex;
+  height: 340px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
   }
   #initialview {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     color: #2c3e50;
-    background: #f2ece8;
+    background: #494949;
   }
 
 </style>
