@@ -48,13 +48,13 @@
 
 <style>
 
-  h2 {
+  #h2 {
   font-weight: normal;
   font-size: 48px;
 
   }
 
-  th{
+  #th {
   font-weight: normal;
   font-size; 24px;
   display: -webkit-flex;
@@ -67,6 +67,11 @@
   justify-content: space-between;
 
   }
+
+  #p {
+  flex-wrap: wrap;
+  }
+
   #initialview {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     color: #2c3e50;
