@@ -23,8 +23,8 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8087,
-    host:  'localhost',
+    port: 80,
+    host:  'admin-12.herokuapp.com',
     backendHost: 'webservice-backend-12.herokuapp.com/api',
     backendPort: 80,
     autoOpenBrowser: true,
