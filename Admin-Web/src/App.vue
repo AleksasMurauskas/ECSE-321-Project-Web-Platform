@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <router-link to="">Go to Fleet Status</router-link>
+    <router-link to="/Ranking">Go to Ranking</router-link>
     <router-view></router-view>
   </div>
 </template>
