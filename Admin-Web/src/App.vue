@@ -1,12 +1,19 @@
 <template>
   <div id="app">
+    <router-link to="/overview"  v-on:click.native="refresh()">Go to Fleet Overview</router-link>
+    <router-link to="/Ranking">Go to Ranking</router-link>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    refresh: function(){
+      location.reload();
+    }
+  }
 }
 </script>
 

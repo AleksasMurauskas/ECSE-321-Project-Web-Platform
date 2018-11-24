@@ -5,7 +5,6 @@
     <!-- ACTIVE TRIPS -->
     <div class="row">
 
-
       <!-- List of Trips -->
       <div class="column">
         <h2 align="left">Active Trips</h2>
@@ -27,6 +26,7 @@
 
           <!--Active Trips List-->
           <tr v-for="trip in filteredTrips">
+
             <td>{{trip.id}}</td>
             <td>{{ trip.startpoint }}</td>
             <td>{{ trip.endpoint }}</td>
@@ -161,8 +161,8 @@
                 <td>{{ selectedDriver.id  }}</td>
                 <td>{{ selectedDriver.name }}</td>
                 <td> {{ selectedDriver.username  }}  </td>
-                <td>  {{ selectedDriver.drivingrate }} </td>
-                  <td>  {{ selectedDriver.passrate  }} </td>
+                <td>  {{ selectedDriver.drivingRate }} </td>
+                  <td>  {{ selectedDriver.passRate  }} </td>
                   <td>  {{ selectedDriver.password  }} </td>
 
 
@@ -277,6 +277,7 @@
 </script>
 
 
+
 </template>
 <style>
   .column {
@@ -335,9 +336,6 @@
       clear: both;
 
   }
-
-
-
 
 </style>
 <span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>
