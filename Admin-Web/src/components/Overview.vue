@@ -43,7 +43,7 @@
       <div class="column">
 
         <h2 align="left"> Trip Info </h2>
-        <table align="left">
+        <table id="trip-result" align="left">
             <tr>
               <th class ="anim:id">TripID</th>
               <th class ="anim:driver">Driver</th>
@@ -292,7 +292,12 @@
   #trips-table {
     height : 300px;
     overflow: scroll;
-    background:
+  }
+
+  #trip-result {
+    height : 300px;
+    background: #ffdab9;
+    -webkit-justify-content: space-between;
 
 
   }
