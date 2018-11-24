@@ -2,7 +2,10 @@
   <div id="overview">
     <h2>OverView</h2>
 
+    <!-- ACTIVE TRIPS -->
     <div class="row">
+      
+      <!-- List of Trips --> 
       <div class="column">
         <h2 align="left">Active Trips</h2>
         <table align="left" >
@@ -96,88 +99,79 @@
       </div>
     </div>
 
+    <!-- ACTIVE DRIVERS -->
+    <div class="row">
+      
+      <!-- List of Drivers -->
+      <div class="column">
+        <h2 align="left"> Active Drivers</h2>
+        <table align="left" >
+          <tr>
+            <td>
+              <input type="text" v-model="searchDriver" placeholder="search Drivers">
+            </td>
 
-    <h2 align="left"> Active Drivers</h2>
-    <table align="left" >
-      <tr>
-        <td>
-          <input type="text" v-model="searchDriver" placeholder="search Drivers">
-        </td>
+          </tr>
+          <tr>
+            <th class ="anim:id">UserID</th>
+            <th class ="anim:startpoint">Name</th>
+            <th class ="anim:endpoint">Button</th>
 
-      </tr>
-      <tr>
-        <th class ="anim:id">UserID</th>
-        <th class ="anim:startpoint">Name</th>
-        <th class ="anim:endpoint">Button</th>
+          </tr>
 
-      </tr>
+          <tr>
+            <tr v-for="user in filteredDrivers">
 
-      <tr>
-        <tr v-for="user in filteredDrivers">
+                  <td>{{user.id}}</td>
+                  <td>{{ user.name }}</td>
 
-               <td>{{user.id}}</td>
-              <td>{{ user.name }}</td>
+                  <td>
+                    <button @click="selectDriver(user)" > select</button>
+                  </td>
 
-              <td>
-                 <button @click="selectDriver(user)" > select</button>
-               </td>
+            </tr>
+            </tr>
 
-        </tr>
-        </tr>
+        </table>
+      </div>
 
-    </table>
+      <!-- Specific driver -->
+      <div class="column">
+        <h2 align="left"> Driver Info </h2>
+        <table align="left">
 
+            <tr>
+              <th class ="anim:id">UserId</th>
+              <th class ="anim:id">Name</th>
+              <th class ="anim:starttime">Username</th>
+              <th class ="anim:endtime">Driving Rate</th>
+              <th class ="anim:endtime">Passenger Rating</th>
+              <th class ="anim:endtime">Password</th>
+              <th class ="anim:endtime">Vehicles</th>
 
-
-
-
-    <h2 align="left"> Driver Info </h2>
-    <table align="left">
-
-        <tr>
-          <th class ="anim:id">UserId</th>
-          <th class ="anim:id">Name</th>
-          <th class ="anim:starttime">Username</th>
-          <th class ="anim:endtime">Driving Rate</th>
-          <th class ="anim:endtime">Passenger Rating</th>
-          <th class ="anim:endtime">Password</th>
-          <th class ="anim:endtime">Vehicles</th>
-
-        </tr>
-      <tbody>
-        <tr>
-            <td>{{ selectedDriver.id  }}</td>
-            <td>{{ selectedDriver.name }}</td>
-            <td> {{ selectedDriver.username  }}  </td>
-            <td>  {{ selectedDriver.drivingrate }} </td>
-              <td>  {{ selectedDriver.passrate  }} </td>
-              <td>  {{ selectedDriver.password  }} </td>
-
-
-
-              <td> <tr v-for="vehicle in selectedDriver.vehicles ">
-              <td>
-              <table border="1">
-              <tr>{{ vehicle.color  }} </tr>
-              <tr>{{ vehicle.make  }} </tr>
-              <tr>{{ vehicle.model  }} </tr>
-              </table>
-              </td>
-
-              </tr>
-              </td>
+            </tr>
+          <tbody>
+            <tr>
+                <td>{{ selectedDriver.id  }}</td>
+                <td>{{ selectedDriver.name }}</td>
+                <td> {{ selectedDriver.username  }}  </td>
+                <td>  {{ selectedDriver.drivingrate }} </td>
+                  <td>  {{ selectedDriver.passrate  }} </td>
+                  <td>  {{ selectedDriver.password  }} </td>
 
 
 
+                  <td> <tr v-for="vehicle in selectedDriver.vehicles ">
+                  <td>
+                  <table border="1">
+                  <tr>{{ vehicle.color  }} </tr>
+                  <tr>{{ vehicle.make  }} </tr>
+                  <tr>{{ vehicle.model  }} </tr>
+                  </table>
+                  </td>
 
-
-
-
-        </tr>
-
-
-      </tbody>
-    </table>
+                  </tr>
+                  </td>
 
 
 
@@ -185,68 +179,83 @@
 
 
 
-    <h2 align="left"> Active Passengers</h2>
-    <table align="left" >
-      <tr>
-        <td>
-          <input type="text" v-model="searchPassenger" placeholder="search Passengers">
-        </td>
-
-      </tr>
-      <tr>
-        <th class ="anim:id">UserID</th>
-        <th class ="anim:startpoint">Name</th>
-        <th class ="anim:endpoint">Button</th>
-
-      </tr>
-
-      <tr>
-        <tr v-for="user in filteredPassengers">
-
-               <td>{{user.id}}</td>
-              <td>{{ user.name }}</td>
-
-              <td>
-                 <button @click="selectPassenger(user)" > select</button>
-               </td>
-
-        </tr>
-        </tr>
-
-    </table>
+            </tr>
 
 
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+
+    <!-- ACTIVE PASSENGERS -->
+    <div class="row">
+      
+      <!-- List of passengers -->
+      <div class="column">
+        <h2 align="left"> Active Passengers</h2>
+        <table align="left" >
+          <tr>
+            <td>
+              <input type="text" v-model="searchPassenger" placeholder="search Passengers">
+            </td>
+
+          </tr>
+          <tr>
+            <th class ="anim:id">UserID</th>
+            <th class ="anim:startpoint">Name</th>
+            <th class ="anim:endpoint">Button</th>
+
+          </tr>
+
+          <tr>
+            <tr v-for="user in filteredPassengers">
+
+                  <td>{{user.id}}</td>
+                  <td>{{ user.name }}</td>
+
+                  <td>
+                    <button @click="selectPassenger(user)" > select</button>
+                  </td>
+
+            </tr>
+            </tr>
+
+        </table>
+      </div>
+
+      <!-- Specific passenger -->
+      <div class="column">
+        <h2 align="left"> Passenger Info </h2>
+        <table align="left">
+
+            <tr>
+              <th class ="anim:id">UserId</th>
+              <th class ="anim:id">Name</th>
+              <th class ="anim:starttime">Username</th>
+
+              <th class ="anim:endtime">Password</th>
+
+
+            </tr>
+          <tbody>
+            <tr>
+                <td>{{ selectedPassenger.id  }}</td>
+                <td>{{ selectedPassenger.name }}</td>
+                <td> {{ selectedPassenger.username  }}  </td>
+
+                  <td>  {{ selectedPassenger.password  }} </td>
 
 
 
-    <h2 align="left"> Passenger Info </h2>
-    <table align="left">
-
-        <tr>
-          <th class ="anim:id">UserId</th>
-          <th class ="anim:id">Name</th>
-          <th class ="anim:starttime">Username</th>
-
-          <th class ="anim:endtime">Password</th>
+            </tr>
 
 
-        </tr>
-      <tbody>
-        <tr>
-            <td>{{ selectedPassenger.id  }}</td>
-            <td>{{ selectedPassenger.name }}</td>
-            <td> {{ selectedPassenger.username  }}  </td>
-
-              <td>  {{ selectedPassenger.password  }} </td>
-
-
-
-        </tr>
-
-
-      </tbody>
-    </table>
-
+          </tbody>
+        </table>
+      </div>
+    </div>
 
 
 
@@ -255,9 +264,6 @@
     </p>
   </div>
 </template>
-
-
-
 
 <script src="./TripService.js">
 </script>
