@@ -282,7 +282,10 @@
       content: "";
       display: table;
       clear: both;
+      overflow: visible;
   }
+
+  
 
 </style>
 <span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>
