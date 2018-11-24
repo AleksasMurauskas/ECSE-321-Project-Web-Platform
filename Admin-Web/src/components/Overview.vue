@@ -4,11 +4,14 @@
 
     <!-- ACTIVE TRIPS -->
     <div class="row">
-      
-      <!-- List of Trips --> 
+
+
+      <!-- List of Trips -->
       <div class="column">
         <h2 align="left">Active Trips</h2>
-        <table align="left" >
+        <div style="height:320px; overflow:auto;">
+        <table id= "trips-table" align="left" >
+
           <tr>
             <td>
               <input type="text" v-model="search" placeholder="search trips">
@@ -16,14 +19,14 @@
 
           </tr>
           <tr>
+
             <th class ="anim:id">ID</th>
             <th class ="anim:startpoint">StartPoint</th>
             <th class ="anim:endpoint">EndPoint</th>
           </tr>
-          
+
           <!--Active Trips List-->
           <tr v-for="trip in filteredTrips">
-            
             <td>{{trip.id}}</td>
             <td>{{ trip.startpoint }}</td>
             <td>{{ trip.endpoint }}</td>
@@ -33,13 +36,14 @@
           </tr>
 
         </table>
+        </div>
       </div>
 
       <!-- Specific trip -->
       <div class="column">
+
         <h2 align="left"> Trip Info </h2>
         <table align="left">
-
             <tr>
               <th class ="anim:id">TripID</th>
               <th class ="anim:driver">Driver</th>
@@ -65,7 +69,7 @@
                 <td>{{ selectedTrip.startpoint }}</td>
                 <td>{{ selectedTrip.endpoint }}</td>
                 <td>{{ selectedTrip.distance }}</td>
-                <td> 
+                <td>
                   <table border="1">
                     <tr v-for="node in selectedTrip.tripNodes">
                       <td> {{node.name}} </td>
@@ -88,7 +92,7 @@
                 </td>
                 <td>{{ selectedTrip.cost_per_customer }}</td>
 
-             
+
             </tr>
 
 
@@ -101,11 +105,12 @@
 
     <!-- ACTIVE DRIVERS -->
     <div class="row">
-      
+
       <!-- List of Drivers -->
       <div class="column">
         <h2 align="left"> Active Drivers</h2>
-        <table align="left" >
+        <div style="height:320px; overflow:auto;">
+        <table id= "driver-table" align="left" >
           <tr>
             <td>
               <input type="text" v-model="searchDriver" placeholder="search Drivers">
@@ -133,12 +138,13 @@
             </tr>
 
         </table>
+        </div>
       </div>
 
       <!-- Specific driver -->
       <div class="column">
         <h2 align="left"> Driver Info </h2>
-        <table align="left">
+        <table  id="driver-result" align="left">
 
             <tr>
               <th class ="anim:id">UserId</th>
@@ -191,11 +197,12 @@
 
     <!-- ACTIVE PASSENGERS -->
     <div class="row">
-      
+
       <!-- List of passengers -->
       <div class="column">
         <h2 align="left"> Active Passengers</h2>
-        <table align="left" >
+        <div style="height:320px; overflow:auto;">
+        <table id= "passenger-table" align="left" >
           <tr>
             <td>
               <input type="text" v-model="searchPassenger" placeholder="search Passengers">
@@ -223,12 +230,13 @@
             </tr>
 
         </table>
+        </div>
       </div>
 
       <!-- Specific passenger -->
       <div class="column">
         <h2 align="left"> Passenger Info </h2>
-        <table align="left">
+        <table id="passenger-result" align="left">
 
             <tr>
               <th class ="anim:id">UserId</th>
@@ -275,6 +283,44 @@
     float: left;
     padding-left: 50px;
     width: 30%;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+  }
+
+  #trips-table {
+    height : 300px;
+    overflow: scroll;
+    background:
+
+
+  }
+
+  #driver-table {
+    height : 300px;
+    overflow: scroll;
+    background : #f2ece8;
+  }
+
+  #driver-result {
+    height : 400px;
+    width : 900px;
+    background : #f2ece8;
+  }
+
+  #passenger-table {
+    height : 300px;
+    overflow: scroll;
+    background: #e0ffff;
+
+  }
+
+  #passenger-result {
+    height : 400px;
+    width : 900px;
+    background: #e0ffff;
+
   }
 
   /* Clear floats after the columns */
@@ -282,10 +328,11 @@
       content: "";
       display: table;
       clear: both;
-      overflow: visible;
+
   }
 
-  
+
+
 
 </style>
 <span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>
