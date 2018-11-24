@@ -3,7 +3,7 @@ var JSOG = require('../../node_modules/jsog/lib/JSOG.js')
 import axios from 'axios'
 var config = require('../../config')
 
-var frontendUrl = 'http://' + config.dev.host+ ':' + config.dev.port
+var frontendUrl = 'http://' + config.dev.host
 var backendUrl = 'http://' + config.dev.backendHost
 //+ ':' + config.dev.backendPort
 
