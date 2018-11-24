@@ -35,6 +35,6 @@ a {
   color: #42b983;
 }
 body {
-  background: url("../assets/night_highway.jpeg") fixed;
+  background: url("../assets/Tripstr.png") fixed;
 }
 </style>
