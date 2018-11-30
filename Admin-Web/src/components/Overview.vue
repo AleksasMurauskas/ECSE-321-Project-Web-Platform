@@ -15,10 +15,9 @@
             <td>
               <input type="text" v-model="search" placeholder="search trips">
             </td>
-
           </tr>
-          <tr>
 
+          <tr>
             <th class ="anim:id">ID</th>
             <th class ="anim:startpoint">StartPoint</th>
             <th class ="anim:endpoint">EndPoint</th>
@@ -42,7 +41,7 @@
       <!-- Specific trip -->
       <div class="column">
 
-        <h2 align="left"> Trip Info </h2>
+        <h2 align="center"> Trip Info </h2>
         <table id="trip-result" align="left">
             <tr>
               <th class ="anim:id">TripID</th>
@@ -108,7 +107,7 @@
 
       <!-- List of Drivers -->
       <div class="column">
-        <h2 align="left"> Active Drivers</h2>
+        <h2 align="center"> Active Drivers</h2>
         <div style="height:320px; overflow:auto;">
         <table id= "driver-table" align="left" >
           <tr>
@@ -143,7 +142,7 @@
 
       <!-- Specific driver -->
       <div class="column">
-        <h2 align="left"> Driver Info </h2>
+        <h2 align="center"> Driver Info </h2>
         <table  id="driver-result" align="left">
 
             <tr>
@@ -267,7 +266,7 @@
 
 
 
-   <p>
+    <p>
       <span style="color:red">Error: Message text comes here</span>
     </p>
   </div>
@@ -290,42 +289,108 @@
 
   }
 
+  h2 {
+    text-align: center;
+  }
+
   #trips-table {
     height : 300px;
+    width : 100%;
     overflow: scroll;
+    background:-webkit-linear-gradient(top, #fff 0%, #ababab 100%);
+    border-top:2px solid;
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+
   }
+
+  tr {
+    vertical-align: center;
+
+  }
+
+
 
   #trip-result {
-    height : 300px;
-    background: #ffdab9;
+    table-layout: fixed;
+    border-collapse: separate;
+    width: 350%;
+    height : 120px;
     -webkit-justify-content: space-between;
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+    cursor:pointer;
+    background:-webkit-linear-gradient(top, #fff 0%, #bcbcbc 100%);
+    white-space:nowrap;
 
 
   }
 
+
   #driver-table {
-    height : 300px;
+    height : 150px;
     overflow: scroll;
     background : #f2ece8;
+    width:100%;
+    margin:0 auto;
+    clear:both;
+    border-collapse:separate;
+    border-spacing:0;
+    background:-webkit-linear-gradient(top, #fee 0%, #bcbcbc 100%);
+    cursor:pointer;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+
+
   }
 
   #driver-result {
-    height : 400px;
-    width : 900px;
+    height : 150px;
+    width : 100%;
     background : #f2ece8;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+    background:-webkit-linear-gradient(top, #fee 0%, #dcdcdc 100%);
+    text-align: center;
+    text-align: center;
+    cursor:pointer;
+    position: sticky;
   }
 
   #passenger-table {
-    height : 300px;
+    table-layout: fixed;
+    height : 150px;
     overflow: scroll;
     background: #e0ffff;
+    background:-webkit-linear-gradient(top, #bed 0%, #adadad 100%);
+    white-space:nowrap;
+    cursor:pointer;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+
 
   }
 
+
   #passenger-result {
-    height : 400px;
-    width : 900px;
-    background: #e0ffff;
+    height : 150px;
+    width : 200%;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    border-right:2px solid;
+    border-left:2px solid;
+    background:-webkit-linear-gradient(top, #bed 0%, #adadad 100%);
+    cursor:pointer;
+
+
 
   }
 
@@ -334,6 +399,8 @@
       content: "";
       display: table;
       clear: both;
+      cursor:pointer;
+
 
   }
 
