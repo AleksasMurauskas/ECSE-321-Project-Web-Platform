@@ -36,4 +36,7 @@ a {
   color: #42b983;
 }
 
+body {
+  background: url("../assets/Tripstr.png") fixed;
+}
 </style>
