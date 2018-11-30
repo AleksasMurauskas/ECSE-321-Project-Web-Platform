@@ -1,6 +1,7 @@
 <template>
-  <div class="hello" >
-    <h1>{{ msg }}</h1>
+  <div id= "app" class="hello" >
+    <h1>{{ msg }}</h1>x
+    <img src="Tripstr.jpg">
   </div>
 </template>
 
@@ -34,7 +35,5 @@ li {
 a {
   color: #42b983;
 }
-body {
-  background: url("../assets/night_highway.jpeg") fixed;
-}
+
 </style>
